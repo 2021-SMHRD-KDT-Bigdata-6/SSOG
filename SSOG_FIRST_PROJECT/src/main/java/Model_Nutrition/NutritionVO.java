@@ -5,6 +5,10 @@ public class NutritionVO {
 	private int ingre_seq;
 	private String nut_name;
 	private int nut_quantity;
+	private int nut_standard;
+	
+	
+
 	public int getNut_seq() {
 		return nut_seq;
 	}
@@ -47,6 +51,6 @@ public class NutritionVO {
 	public void setNut_standard(int nut_standard) {
 		this.nut_standard = nut_standard;
 	}
-	private int nut_standard;
+	
 
 }

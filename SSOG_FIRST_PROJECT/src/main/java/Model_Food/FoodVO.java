@@ -13,6 +13,7 @@ public class FoodVO {
 	private String f_date;
 	private String md_id;
 	private String f_img1;
+	private String f_img2;
 
 	
 	
@@ -115,5 +116,5 @@ public class FoodVO {
 	public void setF_img2(String f_img2) {
 		this.f_img2 = f_img2;
 	}
-	private String f_img2;
+	
 }

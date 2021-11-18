@@ -5,7 +5,7 @@ public class PriceVO {
 	private int ingre_seq;
 	private int ingre_price;
 	private String reg_date;
-	private int inger_market;
+	private int ingre_market;
 	private String price_url;
 	
 	
@@ -16,7 +16,7 @@ public class PriceVO {
 		this.ingre_seq = ingre_seq;
 		this.ingre_price = ingre_price;
 		this.reg_date = reg_date;
-		this.inger_market = inger_market;
+		this.ingre_market = inger_market;
 		this.price_url = price_url;
 	}
 	public String getPrice_url() {
@@ -55,9 +55,9 @@ public class PriceVO {
 		this.reg_date = reg_date;
 	}
 	public int getInger_market() {
-		return inger_market;
+		return ingre_market;
 	}
 	public void setInger_market(int inger_market) {
-		this.inger_market = inger_market;
+		this.ingre_market = inger_market;
 	}
 }

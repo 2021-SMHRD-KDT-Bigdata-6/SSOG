@@ -3,6 +3,7 @@ package Model_Member;
 public class MemberVO {
 	private String mb_id;
 	private String mb_pwd;
+	private String mb_name;
 	private String mb_phone;
 	private String mb_addr;
 	private String mb_gender;
@@ -47,10 +48,16 @@ public class MemberVO {
 	public String getAdmin_yn() {
 		return admin_yn;
 	}
+	public String getMb_name() {
+		return mb_name;
+	}
+	public void setMb_name(String mb_name) {
+		this.mb_name = mb_name;
+	}
 	public void setAdmin_yn(String admin_yn) {
 		this.admin_yn = admin_yn;
 	}
-	public MemberVO(String mb_id, String mb_pwd, String mb_phone, String mb_addr, String mb_gender, String mb_joindate,
+	public MemberVO(String mb_id, String mb_pwd, String mb_name, String mb_phone, String mb_addr, String mb_gender, String mb_joindate,
 			String admin_yn) {
 		super();
 		this.mb_id = mb_id;
