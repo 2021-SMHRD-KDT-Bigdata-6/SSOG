@@ -9741,19 +9741,17 @@ textarea.form-control {
       margin: 0 10px;
       opacity: .5; }
 
-
-  
-  
   .tag-cloud-link{
-  	text-transform: uppercase;
-  display: inline-block;
+  text-transform: uppercase;
+  /*display: inline-block;*/
   margin-bottom: 7px;
   margin-right: 4px;
   border-radius: 4px;
   color: #000000;
-  font-size: 11px;
+  font-size: 20px;
   
   }
+  
   
 
 
