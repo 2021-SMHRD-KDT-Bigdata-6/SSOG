@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	 <link rel="shortcut icon" href="img/favicon.ico">
+  	<link rel="shortcut icon" href="img/favicon.ico">
     <title>게시글 작성</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,6 +27,7 @@
     	.col-md-7{
     		margin : 0 auto;
 		    border: 1px solid #ededed99;
+		    margin-bottom : 100px;
     	}
     	.filebox {
 		    float: right;
@@ -126,7 +127,6 @@
 
 	<div>
 	    <jsp:include page="g_Footer.jsp" flush="true"></jsp:include>
-	
 	</div>
 	    
   

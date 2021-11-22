@@ -22,6 +22,11 @@
     
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .footM{
+	    	margin-top : 100px;
+	    }
+    </style>
   </head>
   <body>
 	<div>
@@ -156,7 +161,7 @@
     	</div>
     </section>
 
-	<div>
+	<div class="footM">
 	    <jsp:include page="g_Footer.jsp" flush="true" />
 	</div>
     

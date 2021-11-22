@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<link rel="shortcut icon" href="img/favicon.ico">
+	<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon" sizes="16x16">
     <title>회원가입</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -48,7 +49,9 @@
     .genderM2{
     	margin-bottom : 2rem;
     }
-    
+    .footM{
+    	margin-top : 100px;
+    }
     </style>
   </head>
   <body>
@@ -134,7 +137,7 @@
     	</div>
     </section>
 
-	<div>
+	<div class="footM">
 	    <jsp:include page="g_Footer.jsp" flush="true" />
 	</div>
     

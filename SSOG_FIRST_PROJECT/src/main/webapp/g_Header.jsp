@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
+<link rel="shortcut icon" href="img/favicon.ico">
 <title>Insert title here</title>
 </head>
   <body>

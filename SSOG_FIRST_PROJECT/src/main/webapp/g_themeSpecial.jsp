@@ -76,7 +76,9 @@
 	/*.container.slide{
 		boder-top : 1px solid #ededed;
 	}*/
-	
+	.footM{
+    	margin-top : 100px;
+    }
     </style>
   </head>
   <body>
@@ -244,7 +246,7 @@
 			</div>
 		</section>
 
-	<div>
+	<div class="footM">
 	    <jsp:include page="g_Footer.jsp" flush="true"></jsp:include>
 	</div>
     

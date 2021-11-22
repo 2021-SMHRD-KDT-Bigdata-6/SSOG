@@ -45,7 +45,9 @@
     	#v-pills-tabContent{
     		background-color : white !important;
     	}
-    
+    	.footM{
+	    	margin-top : 100px;
+	    }
     </style>
   </head>
   <body>
@@ -288,7 +290,7 @@
     	</div>
     </section>
 
-	<div>
+	<div class="footM">
 	    <jsp:include page="g_Footer.jsp" flush="true" />
 	</div>
     

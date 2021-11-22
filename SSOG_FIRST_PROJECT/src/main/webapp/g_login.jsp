@@ -41,7 +41,9 @@
     #topH2{
     	height: 220px !important;
     }
-    
+    .footM{
+    	margin-top : 100px;
+    }
     
     </style>
   </head>
@@ -104,7 +106,7 @@
     	</div>
     </section>
 
-	<div>
+	<div class="footM">
 		<jsp:include page="g_Footer.jsp" flush="true"></jsp:include>
 	</div>
     

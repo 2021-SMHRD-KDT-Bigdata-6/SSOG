@@ -30,6 +30,9 @@
    	 	flex-basis: 100%;
     	max-width: 100%;
     }
+    .footM{
+    	margin-top : 100px;
+    }
    	
     </style>
   </head>
@@ -116,7 +119,7 @@
 			</div>
 		</section>
 
-	<div>
+	<div class="footM">
 	    <jsp:include page="g_Footer.jsp" flush="true" />
 	</div>
     
