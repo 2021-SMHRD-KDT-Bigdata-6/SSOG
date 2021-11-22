@@ -36,6 +36,15 @@
     	/*.ftco-navbar-light {
     		background: black !important;
     	}*/
+    	#chartBox{
+    		width : 500px;
+    		height : 600px;
+    		margin : 0 auto;
+    		margin-top : 70px;
+    	}
+    	#v-pills-tabContent{
+    		background-color : white !important;
+    	}
     
     </style>
   </head>
@@ -142,8 +151,8 @@
 
               <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-day-2-tab">
               	<div class="p-4">
-	              	<h3 class="mb-4">Manufactured By Liquor Store</h3>
-	              	<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+	              	<h3 class="mb-4">마늘종장아찌 볶음밥 영양정보</h3>
+	              	<div id="chartBox"><canvas id="radarChart"></canvas></div>
               	</div>
               </div>
               <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-day-3-tab">
@@ -304,6 +313,58 @@
   <script src="js/google-map.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
   <script src="js/main.js"></script>
+  <!-- chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+  <!-- <script src="js/g_radarChart.js"></script> -->
+  <script>
+	//1) chart를 세팅할 수 있는 canvas 태그 가져오기
+	let radarChart = document.getElementById('radarChart')
+	//2) chart 생성
+	//2-1) 데이터 준비
+	//============임의의 데이터를 생성하는 함수를 만들어 봄!================
+	function random(){
+		return Math.round(Math.random()*100)
+	}
+	
+	function randomData(){
+		return [
+			random(),
+			random(),
+			random(),
+			random(),
+			random()
+		]
+	}
+	//============임의의 데이터를 생성하는 함수를 만들어 봄!================
+	let radarCht =  new Chart(radarChart,{
+		type : 'radar',
+		data : {
+			labels : ['탄수화물', '단백질', '지방', '무기질', '비타민'],
+		  	datasets: [{
+			    label: '마늘종장아찌 볶음밥 영양정보',
+			    data: [...randomData()],
+			    fill: true,
+			    backgroundColor: 'rgba(255, 80, 0, 0.7)',
+			    borderColor: 'rgb(255, 80, 0)',
+			    pointBackgroundColor: 'rgb(255, 80, 0)',
+			    pointBorderColor: '#fff',
+			    pointHoverBackgroundColor: '#fff',
+			    pointHoverBorderColor: 'rgb(255, 80, 0)'
+			  }]
+		},
+		options : {
+			elements : {
+				line: {
+			        borderWidth: 1
+			      }
+			}
+			
+		}
+		
+		
+	})
+  
+  </script>
 
   <script>
 		$(document).ready(function(){
