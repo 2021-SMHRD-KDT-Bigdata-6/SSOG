@@ -6515,7 +6515,7 @@ button.bg-dark:focus {
 .mr-5,
 .mx-5 {
   margin-right: 3rem !important; }
-
+  
 .mb-5,
 .my-5 {
   margin-bottom: 3rem !important; }
@@ -6600,6 +6600,9 @@ button.bg-dark:focus {
 .px-3 {
   padding-left: 1rem !important; }
 
+#specialWhy {	
+  padding-left: 0px !important; }
+  
 .p-4 {
   padding: 1.5rem !important; }
 
@@ -9174,6 +9177,9 @@ textarea.form-control {
 .sort h3 {
   font-size: 18px;
   font-weight: 300; }
+
+#specialWhy .desc h3 {
+  font-size: 12px; }
 
 .about-author .desc h3 {
   font-size: 24px; }
