@@ -70,6 +70,23 @@
   box-sizing: border-box;
 }
 
+
+#card-body{
+	width: 130px; height: 56px;
+	font-size: 12px;
+}
+
+#mb-4{
+	width: 130px; height: 56px;
+}
+
+#md-6{
+	width: 130px; height: 56px;
+    padding-left: 0px;
+    padding-right: 0px;
+	
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -4582,8 +4599,7 @@ textarea.form-control-lg {
 .card-header {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: rgba(0, 0, 0, 0);
 }
 .card-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
@@ -7333,6 +7349,7 @@ textarea.form-control-lg {
 
 .mt-4 {
   margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 .mt-5 {
@@ -7388,7 +7405,12 @@ textarea.form-control-lg {
 }
 
 .mb-4 {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 20px;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  
 }
 
 .mb-5 {
@@ -7777,7 +7799,7 @@ textarea.form-control-lg {
 
 .text-white {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-body {
@@ -7823,7 +7845,7 @@ textarea.form-control-lg {
 
 .bg-primary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+  background-color: white;
 }
 
 .bg-secondary {
@@ -7833,7 +7855,7 @@ textarea.form-control-lg {
 
 .bg-success {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+  background-color: white !important;
 }
 
 .bg-info {
@@ -7843,12 +7865,12 @@ textarea.form-control-lg {
 
 .bg-warning {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-warning-rgb), var(--bs-bg-opacity)) !important;
+  background-color: white !important;
 }
 
 .bg-danger {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+  background-color: white !important;
 }
 
 .bg-light {
@@ -11392,7 +11414,6 @@ body {
   overflow-y: auto;
 }
 .sb-nav-fixed #layoutSidenav #layoutSidenav_content {
-  padding-left: 225px;
   top: 56px;
 }
 
