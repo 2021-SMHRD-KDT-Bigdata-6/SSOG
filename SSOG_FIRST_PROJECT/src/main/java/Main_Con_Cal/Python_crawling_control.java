@@ -21,6 +21,7 @@ public class Python_crawling_control extends HttpServlet {
 		
 		response.sendRedirect("http://121.147.213.215:9000/test?key=yes");
 		// redirect 
+		
 		// 외부 서버 접근 가능
 		
 		
