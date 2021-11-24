@@ -9,6 +9,7 @@ public class MemberVO {
 	private String mb_gender;
 	private String mb_joindate;
 	private String admin_yn;
+	
 	public String getMb_id() {
 		return mb_id;
 	}
@@ -68,6 +69,13 @@ public class MemberVO {
 		this.mb_joindate = mb_joindate;
 		this.admin_yn = admin_yn;
 	}
+	
+	public MemberVO(String mb_id, String mb_pwd) {
+		super();
+		this.mb_id = mb_id;
+		this.mb_pwd = mb_pwd;
+	}
+	
 	public MemberVO() {
 		super();
 		// TODO Auto-generated constructor stub

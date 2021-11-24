@@ -62,7 +62,7 @@
 			    		</p>
 		        </div>
 		        <div class="reg">
-		        	<p class="mb-0"><a href="#" class="mr-2">회원가입</a> <a href="#">로그인</a></p>
+		        	<p class="mb-0"><a href="#" class="mr-2">회원가입</a> <a href="g_login.jsp">로그인</a></p>
 		        </div>
 					</div>
 				</div>
@@ -117,7 +117,7 @@
               <div class="dropdown-menu" aria-labelledby="dropdown04">
               	<a class="dropdown-item" href="g_todaySpecial.jsp">it추천</a>
                 <a class="dropdown-item" href="g_themeSpecial.jsp">테마추천</a>
-                <a class="dropdown-item" href="cart.html">장바구니</a>
+                <a class="dropdown-item" href="g_cart.jsp">장바구니</a>
                 <a class="dropdown-item" href="g_checkout.jsp">결제</a>
               </div>
             </li>
