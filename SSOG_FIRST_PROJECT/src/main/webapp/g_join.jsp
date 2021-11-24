@@ -122,8 +122,8 @@
 		            <div class="col-md-6 auto">
 		            	<div class="form-group genderM2">
 	                	<label for="streetaddress">성별</label>
-		                  <span class='genderM'><input type="radio" name='gender' value="남">남자</span>
-		                  <span><input type="radio" name='gender' value="여">여자</span>
+		                  <span class='genderM'><input type="radio" name='gender' value="1">남자</span>
+		                  <span><input type="radio" name='gender' value="2">여자</span>
 	                </div>
 		            </div>
 		            
