@@ -28,6 +28,9 @@ public class Controller_food {
 	// 음식이름, obj[순서별 레시피, 이미지] / 추신~
 	}
 	
+	public String[] Top100() {
+		return foodDao.Top100();
+	}
 	
 
 	private void insert() {}

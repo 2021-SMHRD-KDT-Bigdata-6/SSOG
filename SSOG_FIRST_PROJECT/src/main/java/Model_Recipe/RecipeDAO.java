@@ -35,8 +35,9 @@ public class RecipeDAO {
 		try {
 			if(rs!=null) rs.close();
 			//여기서 rs가 안 쓰는 함수인 경우 -> 안 닫히는 경우를 막기 위해서
-			psmt.close();
-			conn.close();
+			
+			if(psmt!= null)psmt.close();
+			if(conn!= null)conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

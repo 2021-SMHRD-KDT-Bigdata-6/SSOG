@@ -39,8 +39,9 @@ public class FoodDAO {
 		try {
 			if(rs!=null) rs.close();
 			//여기서 rs가 안 쓰는 함수인 경우 -> 안 닫히는 경우를 막기 위해서
-			psmt.close();
-			conn.close();
+			
+			if(psmt!= null)psmt.close();
+			if(conn!= null)conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -61,9 +62,9 @@ public class FoodDAO {
 			}
 			
 			for(String i : ingredients) {
-				sql = "select season_idx, quality_idx, bpp from t_ingredient where ingre_name = ?";
+				sql = "select season_idx, quality_idx, bpp from t_ingredient where ingre_name like ?";
 				psmt = conn.prepareStatement(sql);
-				psmt.setString(1, i);
+				psmt.setString(1, "%"+i+"%");
 				rs = psmt.executeQuery();
 				if(rs.next() != false) {
 					result *= rs.getDouble(1)*rs.getDouble(2)/rs.getDouble(3);
@@ -136,6 +137,27 @@ public class FoodDAO {
 		
 		return url;
 	}
+	
+	
+	public String[] Top100() {
+		String[] top = new String[100];
+		get_conn();
+		try {
+			String sql = "select f_name from t_food order by f_index desc";
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			for(int i =0; i <100; i++) {
+				rs.next();
+				top[i]=rs.getString(1);
+			} 
+		
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return top;
+	}
+	
+	
 	
 	
 	

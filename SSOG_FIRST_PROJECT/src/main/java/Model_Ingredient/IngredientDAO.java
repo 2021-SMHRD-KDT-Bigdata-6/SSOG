@@ -38,11 +38,34 @@ public class IngredientDAO{
 		try {
 			if(rs!=null) rs.close();
 			//여기서 rs가 안 쓰는 함수인 경우 -> 안 닫히는 경우를 막기 위해서
-			psmt.close();
-			conn.close();
+			
+			if(psmt!= null)psmt.close();
+			if(conn!= null)conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public String getImgUrl(String ingre_name) {
+		String url = "";
+		get_conn();
+		try {
+			String sql  = "select img1 from t_ingredient where ingre_name = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, ingre_name);
+			rs = psmt.executeQuery();
+			if(rs.next()) {
+				url = rs.getString(1);
+				System.out.println("url 가져오기 성공!");
+			}else {
+				System.out.println("url파일이 없어요 ㅠ");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return url;
 	}
 
 	

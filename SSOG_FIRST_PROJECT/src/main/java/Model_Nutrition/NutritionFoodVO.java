@@ -1,7 +1,6 @@
 package Model_Nutrition;
 
 public class NutritionFoodVO {
-	private int f_seq;
 	private double protein;
 	private double carbohydrate;
 	private double fat;

@@ -26,7 +26,8 @@ public class Controller_Ingredient {
 		ingredientDao.updateTIngredient(mb_id);
 	}
 	//해당재료 이미지 가져오기
-	public void showImg(String ingre_name) {
+	public String showImg(String ingre_name) {
+		return ingredientDao.getImgUrl(ingre_name);
 	}
 	//ingre_name 가격 역사~ 모두 조회
 	public ArrayList<PriceHistory> showAllPrice(String ingre_name) {
