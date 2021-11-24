@@ -199,7 +199,7 @@
 						<div class="row">
 						<%for(int i = 1; i <= 12; i++ ){ %>
 							<div class="col-md-4 d-flex">
-								<a href="recipe.jsp">
+								<a href="g_recipe.jsp">
 								<div class="product ftco-animate">
 									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(img/<%=i %>.jpg);">
 										<div class="desc">
