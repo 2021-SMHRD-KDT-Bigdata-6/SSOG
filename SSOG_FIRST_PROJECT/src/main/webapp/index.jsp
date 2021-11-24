@@ -341,7 +341,7 @@
         <div class="row ftco-animate">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel ftco-owl">
-              <% for(int i=1;i<5;i++){%><div class="item">
+              <% for(int i=1;i<6;i++){%><div class="item">
                 <div class="testimony-wrap py-4" id="bordercolor" style="text-align:center">
                 		<div style="width: 100%; height:203px;">
                 			<img src="./images/image_<%=i %>_<%=i %>.jpg" style="width:100%; height:100%;"/>
