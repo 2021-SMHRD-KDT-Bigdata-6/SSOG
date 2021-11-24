@@ -21,7 +21,7 @@
 				success : ()=>{
 					$("h1").after( "<h2>"+today+" 성공했습니다.</h2>");
 				}
-				error : () => {
+				error : () => {""
 					$("h1").after( "<h2>"+today+" 실패했습니다.</h2>")
 				}
 			})	

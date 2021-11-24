@@ -1,3 +1,5 @@
+<%@page import="java.util.Random"%>
+<%@page import="Controller.Controller_food"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -42,7 +44,13 @@
     
   </head>
   <body>
- 
+ 	<% String[] top100=(String[])session.getAttribute("top100"); 
+ 	  Controller_food food = new Controller_food();
+ 	  Random ran = new Random();
+ 	  int top =ran.nextInt(100);%>
+ 	
+ 	
+ 	
   	<div class="wrap">
 			<div class="container">
 				<div class="row">
@@ -163,7 +171,7 @@
 				<div class="row">
 					<div class="col-md-3 d-flex">
 						<div class="product ftco-animate">
-							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/prod-1.jpg);">
+							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=top%>);">
 								<div class="desc">
 									<p class="meta-prod d-flex">
 										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
