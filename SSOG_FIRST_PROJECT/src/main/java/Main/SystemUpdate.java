@@ -10,7 +10,7 @@ public class SystemUpdate {
 //		
 ////		System.out.println("test");
 //		Controller_Ingredient conIngre = new Controller_Ingredient();
-//		Controller_food conFood = new Controller_food();
+		Controller_food conFood = new Controller_food();
 //		//conIngre.insertAll("¿õ");
 ////		System.out.println("¾ßÈ£");
 //		conFood.updateF_index();
@@ -21,7 +21,7 @@ public class SystemUpdate {
 		System.out.println((byte)'9');
 
 //48 57
-		
+		System.out.println("1" +conFood.getImgUrl("È£µÎ¸êÄ¡ººÀ½"));
 		
 
 	}
