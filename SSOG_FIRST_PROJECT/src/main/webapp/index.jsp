@@ -117,7 +117,7 @@
               <div class="dropdown-menu" aria-labelledby="dropdown04">
               	<a class="dropdown-item" href="g_todaySpecial.jsp">it추천</a>
                 <a class="dropdown-item" href="g_themeSpecial.jsp">테마추천</a>
-                <a class="dropdown-item" href="cart.html">장바구니</a>
+                <a class="dropdown-item" href="g_cart.jsp">장바구니</a>
                 <a class="dropdown-item" href="g_checkout.jsp">결제</a>
               </div>
             </li>

@@ -57,9 +57,9 @@
     <section class="ftco-section">
       <div class="container">
         <div class="row d-flex">
-          <div class="col-lg-6 d-flex align-items-stretch ftco-animate" style="padding-left: 0px;">
+          <% for(int i=1;i<7;i++) {%><div class="col-lg-6 d-flex align-items-stretch ftco-animate" style="padding-left: 0px;">
           	<div class="blog-entry d-md-flex">
-          		<a href="HappyCook2.html" class="block-20 img" style="background-image: url('images/image_1.jpg');">
+          		<a href="HappyCook2.jsp" class="block-20 img" style="background-image: url('images/image_<%=i %>.jpg');">
               </a>
               <div class="text p-4 bg-light" id="pdbtWhy">
               	<div class="meta">
@@ -80,8 +80,8 @@
 
               </div>
             </div>
-          </div>
-          <div class="col-lg-6 d-flex align-items-stretch ftco-animate" style="padding-left: 0px;">
+          </div><% }%>
+          <!-- <div class="col-lg-6 d-flex align-items-stretch ftco-animate" style="padding-left: 0px;">
           	<div class="blog-entry d-md-flex">
           		<a href="HappyCook2.html" class="block-20 img" style="background-image: url('images/image_2.jpg');">
               </a>
@@ -200,7 +200,7 @@
 
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="row mt-5">
           <div class="col text-center">

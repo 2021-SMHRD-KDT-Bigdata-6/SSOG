@@ -34,8 +34,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate mb-5 text-center">
-          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Cart <i class="fa fa-chevron-right"></i></span></p>
-            <h2 class="mb-0 bread">My Cart</h2>
+          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>장바구니 <i class="fa fa-chevron-right"></i></span></p>
+            <h2 class="mb-0 bread">장바구니</h2>
           </div>
         </div>
       </div>
@@ -51,14 +51,14 @@
 						    	<th>&nbsp;</th>
 						    	<th>&nbsp;</th>
 						    	<th>Product</th>
-						      <th>Price</th>
-						      <th>Quantity</th>
-						      <th>total</th>
+						      <th>가격</th>
+						      <th>갯수</th>
+						      <th>총 금액</th>
 						      <th>&nbsp;</th>
 						    </tr>
 						  </thead>
 						  <tbody>
-						    <tr class="alert" role="alert">
+						    <%for(int i=1;i<6;i++) {%><tr class="alert" role="alert">
 						    	<td>
 						    		<label class="checkbox-wrap checkbox-primary">
 										  <input type="checkbox" checked>
@@ -70,143 +70,25 @@
 						    	</td>
 						      <td>
 						      	<div class="email">
-						      		<span>Jim Beam Kentucky Straight</span>
-						      		<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
+						      		<span>갈치</span>
+						      		<span></span>
 						      	</div>
 						      </td>
-						      <td>$44.99</td>
+						      <td>20000원</td>
 						      <td class="quantity">
 					        	<div class="input-group">
 				             	<input type="text" name="quantity" class="quantity form-control input-number" value="2" min="1" max="100">
 				          	</div>
 				          </td>
-				          <td>$89.98</td>
+				          <td>40000원</td>
 						      <td>
 						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
 				          	</button>
 				        	</td>
-						    </tr>
+						    </tr><% }%>
 
-						    <tr class="alert" role="alert">
-						    	<td>
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						    	<td>
-						    		<div class="img" style="background-image: url(images/prod-2.jpg);"></div>
-						    	</td>
-						      <td>
-						      	<div class="email">
-						      		<span>Jim Beam Kentucky Straight</span>
-						      		<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-						      	</div>
-						      </td>
-						      <td>$30.99</td>
-						      <td class="quantity">
-					        	<div class="input-group">
-				             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-				          	</div>
-				          </td>
-				          <td>$30.99</td>
-						      <td>
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
-				        	</td>
-						    </tr>
-
-						    <tr class="alert" role="alert">
-						    	<td>
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						    	<td>
-						    		<div class="img" style="background-image: url(images/prod-3.jpg);"></div>
-						    	</td>
-						      <td>
-						      	<div class="email">
-						      		<span>Jim Beam Kentucky Straight</span>
-						      		<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-						      	</div>
-						      </td>
-						      <td>$35.50</td>
-						      <td class="quantity">
-					        	<div class="input-group">
-				             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-				          	</div>
-				          </td>
-				          <td>$35.50</td>
-						      <td>
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
-				        	</td>
-						    </tr>
-
-						    <tr class="alert" role="alert">
-						    	<td>
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						    	<td>
-						    		<div class="img" style="background-image: url(images/prod-4.jpg);"></div>
-						    	</td>
-						      <td>
-						      	<div class="email">
-						      		<span>Jim Beam Kentucky Straight</span>
-						      		<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-						      	</div>
-						      </td>
-						      <td>$76.99</td>
-						      <td class="quantity">
-					        	<div class="input-group">
-				             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-				          	</div>
-				          </td>
-				          <td>$76.99</td>
-						      <td>
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
-				        	</td>
-						    </tr>
-
-						    <tr class="alert" role="alert">
-						    	<td class="border-bottom-0">
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						    	<td class="border-bottom-0">
-						    		<div class="img" style="background-image: url(images/prod-5.jpg);"></div>
-						    	</td>
-						      <td class="border-bottom-0">
-						      	<div class="email">
-						      		<span>Jim Beam Kentucky Straight</span>
-						      		<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-						      	</div>
-						      </td>
-						      <td class="border-bottom-0">$40.00</td>
-						      <td class="quantity border-bottom-0">
-					        	<div class="input-group">
-				             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-				          	</div>
-				          </td>
-				          <td class="border-bottom-0">$40.00</td>
-						      <td class="border-bottom-0">
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
-				        	</td>
-						    </tr>
+						  
 						  </tbody>
 						</table>
 					</div>
@@ -214,26 +96,26 @@
     		<div class="row justify-content-end">
     			<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
     				<div class="cart-total mb-3">
-    					<h3>Cart Totals</h3>
+    					<h3>장바구니 금액</h3>
     					<p class="d-flex">
-    						<span>Subtotal</span>
-    						<span>$20.60</span>
+    						<span>총 금액</span>
+    						<span>200,000원</span>
     					</p>
     					<p class="d-flex">
-    						<span>Delivery</span>
-    						<span>$0.00</span>
+    						<span>배달료</span>
+    						<span>5000원</span>
     					</p>
     					<p class="d-flex">
-    						<span>Discount</span>
-    						<span>$3.00</span>
+    						<span>할인</span>
+    						<span>0원</span>
     					</p>
     					<hr>
     					<p class="d-flex total-price">
-    						<span>Total</span>
-    						<span>$17.60</span>
+    						<span>총합계</span>
+    						<span>205,000원</span>
     					</p>
     				</div>
-    				<p class="text-center"><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+    				<p class="text-center"><a href="g_checkout.jsp" class="btn btn-primary py-3 px-4">결제하기</a></p>
     			</div>
     		</div>
     	</div>

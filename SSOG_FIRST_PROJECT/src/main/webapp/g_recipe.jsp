@@ -59,7 +59,7 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate mb-5 text-center">
-          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span><a href="product.html">Products <i class="fa fa-chevron-right"></i></a></span> <span>Products Single <i class="fa fa-chevron-right"></i></span></p>
+          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.jsp">Home <i class="fa fa-chevron-right"></i></a></span> <span><a href="g_themeSpecial">테마추천 <i class="fa fa-chevron-right"></i></a></span> <span>레시피 <i class="fa fa-chevron-right"></i></span></p>
             <h2 class="mb-0 bread">레시피</h2>
           </div>
         </div>
@@ -89,8 +89,7 @@
     				<p><strong>재료</strong></p>
 						<p>마늘종장아찌(1줌=50g), 통조림 햄(1/4개=50g), 마늘(2쪽), 밥(1공기), 달걀(1개)</p>
 
-						<p><strong>양념</strong></p>
-						<p>참기름(0.3), 후춧가루(약간)</p>
+						
 						<div class="row mt-4">
 							<div class="input-group col-md-6 d-flex mb-3">
 	             	<span class="input-group-btn mr-2">
@@ -107,7 +106,7 @@
 	          	</div>
 	          	<div class="w-100"></div>
           	</div>
-          	<p><a href="cart.html" class="btn btn-primary py-3 px-5 mr-2">장바구니</a><a href="cart.html" class="btn btn-primary py-3 px-5">결제하기</a></p>
+          	<p><a href="g_cart.jsp" class="btn btn-primary py-3 px-5 mr-2">장바구니</a><a href="g_checkout.jsp" class="btn btn-primary py-3 px-5">결제하기</a></p>
     			</div>
     		</div>
 
@@ -163,7 +162,7 @@
 								   		<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
 								   		<div class="desc">
 								   			<h4>
-								   				<span class="text-left">Jacob Webb</span>
+								   				<span class="text-left">김진웅웅</span>
 								   				<span class="text-right">25 April 2020</span>
 								   			</h4>
 								   			<p class="star">
@@ -176,14 +175,14 @@
 							   					</span>
 							   					<span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
 								   			</p>
-								   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+								   			<p>이거진짜욘나맛있음 ! !</p>
 								   		</div>
 								   	</div>
 								   	<div class="review">
 								   		<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
 								   		<div class="desc">
 								   			<h4>
-								   				<span class="text-left">Jacob Webb</span>
+								   				<span class="text-left">위상상윤</span>
 								   				<span class="text-right">25 April 2020</span>
 								   			</h4>
 								   			<p class="star">
@@ -196,14 +195,14 @@
 							   					</span>
 							   					<span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
 								   			</p>
-								   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+								   			<p>나 아직도 크롤링 하는중 ㅋㅋ</p>
 								   		</div>
 								   	</div>
 								   	<div class="review">
 								   		<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
 								   		<div class="desc">
 								   			<h4>
-								   				<span class="text-left">Jacob Webb</span>
+								   				<span class="text-left">정정소연</span>
 								   				<span class="text-right">25 April 2020</span>
 								   			</h4>
 								   			<p class="star">
@@ -215,8 +214,7 @@
 								   					<i class="fa fa-star"></i>
 							   					</span>
 							   					<span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
-								   			</p>
-								   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+								   			</p>......</p>
 								   		</div>
 								   	</div>
 						   		</div>
