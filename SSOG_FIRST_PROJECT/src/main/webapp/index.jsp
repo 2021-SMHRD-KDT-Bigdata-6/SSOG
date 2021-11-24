@@ -62,7 +62,7 @@
 			    		</p>
 		        </div>
 		        <div class="reg">
-		        	<p class="mb-0"><a href="#" class="mr-2">회원가입</a> <a href="#">로그인</a></p>
+		        	<p class="mb-0"><a href="#" class="mr-2">회원가입</a> <a href="g_login.jsp">로그인</a></p>
 		        </div>
 					</div>
 				</div>
@@ -117,7 +117,7 @@
               <div class="dropdown-menu" aria-labelledby="dropdown04">
               	<a class="dropdown-item" href="g_todaySpecial.jsp">it추천</a>
                 <a class="dropdown-item" href="g_themeSpecial.jsp">테마추천</a>
-                <a class="dropdown-item" href="cart.html">장바구니</a>
+                <a class="dropdown-item" href="g_cart.jsp">장바구니</a>
                 <a class="dropdown-item" href="g_checkout.jsp">결제</a>
               </div>
             </li>
@@ -341,7 +341,7 @@
         <div class="row ftco-animate">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel ftco-owl">
-              <% for(int i=1;i<5;i++){%><div class="item">
+              <% for(int i=1;i<6;i++){%><div class="item">
                 <div class="testimony-wrap py-4" id="bordercolor" style="text-align:center">
                 		<div style="width: 100%; height:203px;">
                 			<img src="./images/image_<%=i %>_<%=i %>.jpg" style="width:100%; height:100%;"/>

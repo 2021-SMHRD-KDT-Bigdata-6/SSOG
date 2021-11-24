@@ -100,7 +100,7 @@
 		            
 	            </div>
 	          </form><!-- END -->
-				<a href="g_update.jsp">회원정보수정</a>
+				<!-- <a href="g_update.jsp">회원정보수정</a> -->
           </div> <!-- .col-md-8 -->
         </div>
     	</div>
