@@ -5,20 +5,33 @@ public class PriceVO {
 	private String ingre_name;
 	private int ingre_price;
 	private String reg_date;
-	private int ingre_market;
+	private String ingre_market;
 	private String price_url;
 	private String ingre_quality;
+	private String ingre_date;
 	
 	
 	
 	
+	public String getIngre_market() {
+		return ingre_market;
+	}
+	public void setIngre_market(String ingre_market) {
+		this.ingre_market = ingre_market;
+	}
+	public String getIngre_date() {
+		return ingre_date;
+	}
+	public void setIngre_date(String ingre_date) {
+		this.ingre_date = ingre_date;
+	}
 	public String getIngre_quality() {
 		return ingre_quality;
 	}
 	public void setIngre_quality(String ingre_quality) {
 		this.ingre_quality = ingre_quality;
 	}
-	public PriceVO(int price_seq, String ingre_name, int ingre_price, String reg_date, int ingre_market, String price_url, String ingre_quality) {
+	public PriceVO(int price_seq, String ingre_name, int ingre_price, String reg_date, String ingre_market, String price_url, String ingre_quality, String ingre_date) {
 		super();
 		this.price_seq = price_seq;
 		this.ingre_name = ingre_name;
@@ -27,6 +40,7 @@ public class PriceVO {
 		this.ingre_market = ingre_market;
 		this.price_url = price_url;
 		this.ingre_quality = ingre_quality;
+		this.ingre_date= ingre_date;
 	}
 	public String getPrice_url() {
 		return price_url;
@@ -63,10 +77,10 @@ public class PriceVO {
 	public void setReg_date(String reg_date) {
 		this.reg_date = reg_date;
 	}
-	public int getInger_market() {
+	public String getInger_market() {
 		return ingre_market;
 	}
-	public void setInger_market(int inger_market) {
+	public void setInger_market(String inger_market) {
 		this.ingre_market = inger_market;
 	}
 }

@@ -7,7 +7,6 @@ public class IngredientVO {
 	private String mb_id;
 	private double season_index;
 	private double quality_index;
-	private String season;
 	private double bpp;
 	private String property;
 	private String quality_pn;
@@ -49,12 +48,7 @@ public class IngredientVO {
 	public void setQuality_index(double quality_index) {
 		this.quality_index = quality_index;
 	}
-	public String getSeason() {
-		return season;
-	}
-	public void setSeason(String season) {
-		this.season = season;
-	}
+
 	public double getBpp() {
 		return bpp;
 	}
@@ -90,7 +84,7 @@ public class IngredientVO {
 		// TODO Auto-generated constructor stub
 	}
 	public IngredientVO(int ingre_seq, String ingre_name, String reg_date, String mb_id, double season_index,
-			double quality_index, String season, double bpp, String property, String quality_pn, String img1,
+			double quality_index, double bpp, String property, String quality_pn, String img1,
 			String img2) {
 		super();
 		this.ingre_seq = ingre_seq;
@@ -99,7 +93,7 @@ public class IngredientVO {
 		this.mb_id = mb_id;
 		this.season_index = season_index;
 		this.quality_index = quality_index;
-		this.season = season;
+
 		this.bpp = bpp;
 		this.property = property;
 		this.quality_pn = quality_pn;

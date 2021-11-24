@@ -6,10 +6,15 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
+
 public class PriceDAO {
-	
+	private LocalDate now = LocalDate.now();
+	private String today = now.format(DateTimeFormatter.ofPattern("yyyy.MM.dd"));
+	private String Month = today.substring(5,7) + "월";
 
 	private Connection conn = null;
 	private PreparedStatement psmt = null;
@@ -44,80 +49,55 @@ public class PriceDAO {
 	}
 	
 	
-	public void createBPP(String name) {
-		try {
-			ArrayList<Double> prices = new ArrayList<Double>();
-			String sql =  "select ingre_price, reg_date from t_price where ingre_name= ? order by reg_date";
-			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, name);
-			rs=psmt.executeQuery();
-			while(rs.next()) {
-				prices.add(rs.getDouble(0));
-			}
-			
-			if(prices != null) {
-			//bpp지수도출
-				double Bpp = 1;
-				for(int i = 1; i < prices.size(); i++) {
-					Bpp *= prices.get(i)/prices.get(i-1);
-				}
-				String sqlInsert = "update t_ingredient set bpp where ingre_name = {}";
-				psmt = conn.prepareStatement(sql);
-				psmt.setString(1, name);
-				int cnt = psmt.executeUpdate();
-				if(cnt > 0) System.out.println("Bpp이 정상적으로 입력되었습니다.");
-				else System.out.println("Bpp이 입력되지 않았습니다.");
-			}else {
-				System.out.println("해당 name의 값의 재료 가격 정보가 없습니다.");
-			}
-		}catch(SQLException e) {
-			e.printStackTrace();
-		}
-	}
+
 	
-	
-	public double createDeviation() {
-		
-		double deviation = 0;
+	public int getCurrentPrice(String ingre_name) {
+		int result = 0;
 		try {
-			String sql =  "select bpp from t_ingredient";
+			get_conn();
+			String sql = "select ingre_price from t_price where ingre_name = ? and ingre_date=? ";
 			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, ingre_name);
+			psmt.setString(2, today);
 			rs = psmt.executeQuery();
-			ArrayList<Double> BPPS = new ArrayList<Double>();
-			double sum = 0;
-			while (rs.next()) {
-				BPPS.add(rs.getDouble(1));
-				sum += rs.getDouble(1);
-			}
-			int count = BPPS.size();
-			double mean = sum/count;
-			for (int i = 0 ; i <count; i++) {
-				deviation += Math.pow(BPPS.get(i)-mean, 2);
-			}
-			deviation = Math.sqrt(deviation/count);
-		}catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		return deviation;
-	}
-	
-	
-	public void createSeasonIndex() {
-		double deviation =  createDeviation();
-		try {
-			String sql = "update t"
+			if(rs.next() != false) {
+				result = rs.getInt(1);
+				System.out.println("가격 출력!");
+				System.out.println(ingre_name+ ":"+ result); 
+			}else System.out.println("가격정보가 없습니다.");
 			
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
+		return result;
+
 	}
 	
 	
-	
-	
-	
-	public void get() {}
+	public ArrayList<PriceHistory> getAllPrice(String ingre_name) {
+		ArrayList<PriceHistory> prices = new ArrayList<PriceHistory>();
+		
+		
+		try {
+			get_conn();
+			String sql = "select ingre_date, ingre_price from t_price where ingre_name = ? order by ingre_date";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, ingre_name);
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				prices.add(new PriceHistory(rs.getString(1), rs.getInt(2)));
+			}
+			if(prices.size() == 0 ) System.out.println("가격정보가 없습니다.");
+			else {
+				System.out.println(ingre_name + "의 " + prices.get(0).getIngre_date() +"부터 가격정보 출력합니다.");
+			}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return prices;
+
+	}
 	public void insert() {
 	}
 	public void update() {

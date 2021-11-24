@@ -1,6 +1,8 @@
 package Main_Con_Cal;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,6 +20,8 @@ public class Python_crawling_control extends HttpServlet {
 
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		LocalDate now = LocalDate.now();
+		String today = now.format(DateTimeFormatter.ofPattern("yyyy.MM.dd"));
 		
 		response.sendRedirect("http://121.147.213.215:9000/test?key=yes");
 		// redirect 
