@@ -56,7 +56,7 @@ public class IngredientDAO{
 			psmt.setString(1, name);
 			rs=psmt.executeQuery();
 			while(rs.next()) {
-				prices.add(rs.getDouble(0));
+				prices.add(rs.getDouble(1));
 			}
 			
 			if(prices != null) {
@@ -108,33 +108,46 @@ public class IngredientDAO{
 	}
 	
 	
-	public void createSeasonIndex(String name, double deviation) {
+	public void updateAllSeasonIndex(double deviation) {
 		get_conn();
 		
 		
 		try {
-			//season 정보가져오기
-			String sql ="select season_month from t_season where ingre_name = ?";
+			String sql = "update t_ingredient set season_idx = 1";
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, name);
-			rs = psmt.executeQuery();
-			ArrayList<String> season = new ArrayList<String>();
-			while(rs.next()) {
-				season.add(rs.getString(1));
-			}
+			psmt.executeUpdate();
 			
-			// seasonidx값 넣기
-			for(int i =0; i <season.size(); i++) {
-				if(season.get(i).equals(Month)) {
+			
+			
+			
+			sql = "select ingre_name from t_season where season_month = ? ";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, Month);
+			rs = psmt.executeQuery();
+			ArrayList<String> seasonIngre = new ArrayList<String>();
+			while(rs.next()) {
+				seasonIngre.add(rs.getString(1));
+				System.out.print(rs.getString(1));
+			}
+			System.out.println();
+			
+			for (String i : seasonIngre) {
+				sql = "select ingre_name from t_ingredient where ingre_name like ?";
+				psmt = conn.prepareStatement(sql);
+				psmt.setString(1, "%"+i+"%");
+				rs = psmt.executeQuery();
+				while(rs.next()) {
 					sql = "update t_ingredient set season_idx =? where  ingre_name = ?";
 					psmt = conn.prepareStatement(sql);
 					psmt.setDouble(1, 1+deviation);
-					psmt.setString(2, name);
+					psmt.setString(2, rs.getString(1));
 					int cnt = psmt.executeUpdate();
 					if(cnt == 0) System.out.println("제철 데이터가 없습니다.");
 					else System.out.println("제철지수 입력 완료");
+					
 				}
 			}
+			
 		}catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("제철 데이터가 없습니다.");
@@ -161,25 +174,6 @@ public class IngredientDAO{
 	}
 	
 	
-	
-	public void updateAllSeasonIndex() {
-		get_conn();
-		IngredientDAO sample = new IngredientDAO();
-		double deviation = sample.createDeviation();
-		try {
-			String sql = "select ingre_name from t_ingredient";
-			psmt = conn.prepareStatement(sql);
-			rs =  psmt.executeQuery();
-			while(rs.next()) {
-				sample.createSeasonIndex(rs.getString(1), deviation);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		sample.close();
-	}
-	
 		
 		
 
@@ -204,7 +198,7 @@ public class IngredientDAO{
 				if(cnt >0) System.out.println(rs.getString(1)+"data업로드!");
 			}
 			sample.updateAllBPP();
-			sample.updateAllSeasonIndex();
+			sample.updateAllSeasonIndex(createDeviation());
 			sample.updateAllQualityIdx();
 			sample.close();
 		}catch (Exception e) {
@@ -215,7 +209,7 @@ public class IngredientDAO{
 	public void updateAllQualityIdx() {
 		get_conn();
 		try {
-			String sql = "update set t_ingredient set quality_idx = 1";
+			String sql = "update t_ingredient set  quality_idx = 1";
 			psmt = conn.prepareStatement(sql);
 			int cnt = psmt.executeUpdate();
 			if(cnt>0) System.out.println("품질지수 도출");
@@ -241,7 +235,7 @@ public class IngredientDAO{
 				psmt.setString(3, rs.getString(1));
 			}
 			sample.updateAllBPP();
-			sample.updateAllSeasonIndex();
+			sample.updateAllSeasonIndex(createDeviation());
 			//smaple.updateAllQualityIdx()
 			sample.close();
 		}catch (Exception e) {
