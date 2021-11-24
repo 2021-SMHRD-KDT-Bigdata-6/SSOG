@@ -75,8 +75,9 @@
 						<%for(int i = 1; i <= 12; i++ ){ %>
 							<div class="col-md-4 d-flex">
 								<a href="recipe.jsp">
-								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(img/<%=i %>.jpg);">
+								<div class="product ftco-animate" style="text-align: center">
+									
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(img/<%=i %>.jpg)">
 										<div class="desc">
 											<!-- <p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -85,10 +86,10 @@
 											</p> -->
 										</div>
 									</div>
-									<div class="text text-center">
+									<div class="text text-center" style="width: 315px;">
 										<span class="category">한식</span>
 										<h2>된장찌개 한상</h2>
-										<p class="mb-0"><span class="price">추운계절에 따뜻한 국물이 맛있는 한식</span></p>
+										
 									</div>
 								</div>
 								</a>

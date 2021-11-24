@@ -210,10 +210,10 @@
 											</p> -->
 										</div>
 									</div>
-									<div class="text text-center">
+									<div class="text text-center" style="width: 315px;">
 										<span class="category">한식</span>
 										<h2>된장찌개 한상</h2>
-										<p class="mb-0"><span class="price">추운계절에 따뜻한 국물이 맛있는 한식</span></p>
+										
 									</div>
 								</div>
 								</a>
