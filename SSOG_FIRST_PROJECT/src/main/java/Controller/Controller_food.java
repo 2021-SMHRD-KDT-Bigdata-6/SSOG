@@ -20,7 +20,7 @@ public class Controller_food {
 	//food이미지 url가져오기!
 	public String getImgUrl(String food_name) {
 		String url = foodDao.getUrl(food_name);
-		url = url.substring(url.indexOf("webapp"+7));
+		url = url.substring(url.indexOf("webapp")+6);
 		return url;
 		
 	}
