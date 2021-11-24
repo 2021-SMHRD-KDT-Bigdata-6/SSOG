@@ -1,6 +1,5 @@
 package Model_Member;
 
-import ModelDAO.ModelDAO;
 
 public class MemberDAO {
 	public void join() {}
