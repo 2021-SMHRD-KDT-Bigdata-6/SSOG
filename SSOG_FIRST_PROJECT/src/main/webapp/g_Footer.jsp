@@ -8,13 +8,14 @@
 </head>
 <body>
 
-    <footer class="ftco-footer">
+    <footer class="ftco-footer" id="ftco-footer">
       <div class="container">
         <div class="row mb-5">
           <div class="col-sm-12 col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2 logo"><a href="#">Liquor <span>Store</span></a></h2>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <h2 class="ftco-heading-2 logo"><a href="#">물가의고수<span>Store</span></a></h2>
+              <p>당신의 가까이에서, 신선하게, 알뜰하
+              게, 즐겁게!</p>
               <ul class="ftco-footer-social list-unstyled mt-2">
                 <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
@@ -24,34 +25,28 @@
           </div>
           <div class="col-sm-12 col-md">
             <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">My Accounts</h2>
+              <h2 class="ftco-heading-2">내 계정</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>My Account</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Register</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Log In</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>My Order</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>내 계정</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>로그인</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>장바구니</a></li>
               </ul>
             </div>
           </div>
           <div class="col-sm-12 col-md">
             <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Information</h2>
+              <h2 class="ftco-heading-2">정보 게시판</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About us</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Catalog</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact us</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Term &amp; Conditions</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>물가 정보</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>레시피</a></li>
               </ul>
             </div>
           </div>
           <div class="col-sm-12 col-md">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Quick Link</h2>
+              <h2 class="ftco-heading-2">고객센터</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>New User</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Help Center</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Report Spam</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Faq's</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>문의하기</a></li>
               </ul>
             </div>
           </div>
@@ -60,9 +55,9 @@
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><span class="icon fa fa-map marker"></span><span class="text">광주광역시 남구 송암로 60 CGI센터 2층</span></li>
+	                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+82 062 123 5678</span></a></li>
+	                <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">SSOG@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
