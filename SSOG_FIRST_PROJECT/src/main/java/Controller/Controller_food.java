@@ -19,7 +19,9 @@ public class Controller_food {
 	}
 	//food이미지 url가져오기!
 	public String getImgUrl(String food_name) {
-		return foodDao.getUrl(food_name);
+		String url = foodDao.getUrl(food_name);
+		url = url.substring(url.indexOf("webapp"+7));
+		return url;
 		
 	}
 	//food recipe 정리하기!
@@ -28,6 +30,7 @@ public class Controller_food {
 	// 음식이름, obj[순서별 레시피, 이미지] / 추신~
 	}
 	
+
 	public String[] Top100() {
 		return foodDao.Top100();
 	}

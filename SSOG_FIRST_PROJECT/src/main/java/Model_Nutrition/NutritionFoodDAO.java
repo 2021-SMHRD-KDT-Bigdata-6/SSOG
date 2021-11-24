@@ -1,5 +1,6 @@
 package Model_Nutrition;
 
+import java.awt.image.SampleModel;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -44,7 +45,7 @@ public class NutritionFoodDAO {
 	
 	public void makeNutrition (String food_name) {
 		get_conn();
-		NutritionFoodVO vo = new NutritionFoodVO();
+		NutritionFoodVO vo = new NutritionFoodVO(0,0,0,0,0,0);
 		try {
 			ArrayList<String> ingres = new ArrayList<String>();
 			ArrayList<String> ingresQuan = new ArrayList<String>();
@@ -57,33 +58,73 @@ public class NutritionFoodDAO {
 				ingresQuan.add(rs.getString(2));
 			}
 			
-			for (String i : ingresQuan) {
-				int index = i.indexOf("g");
-				int j = 1;
-				while(true) {
-					if(47<(byte)i.charAt(index-j) && (byte)i.charAt(index-j)<58) j++;
-					else break;
+			for (int i =0; i<ingresQuan.size(); i++) {
+				int index = ingresQuan.get(i).indexOf('g');
+				if(index !=-1) {
+					int j = 1;
+					while(true) {
+						if(47<(byte)ingresQuan.get(i).charAt(index-j) && (byte)ingresQuan.get(i).charAt(index-j)<58) j++;
+						else break;
+					}
+					
+					ingresQuan.set(i, ingresQuan.get(i).substring(index-j+1, index+1));
+					
+				}else {
+					index = ingresQuan.get(i).indexOf("ml");
+					if(index != -1) {
+						int j = 1;
+						while(true) {
+							if(47<(byte)ingresQuan.get(i).charAt(index-j) && (byte)ingresQuan.get(i).charAt(index-j)<58) j++;
+							else break;
+						}
+						ingresQuan.set(i, ingresQuan.get(i).substring(index-j+1, index+2));
+						
+					}else {
+						ingresQuan.set(i, "0");
+					}	
+					
 				}
-				ingresQuan.
-				i.charAt(index)
 				
 			}
-			ingresQuan.p
 			
-			
-			
-			
-			
-			
+			NutritionFoodVO vo2 = null;
 			for (String i : ingres) {
 				sql = "select nut_name, nut_quantity, nut_standard from t_nutrition where ingre_name = ?";
-			
+				psmt = conn.prepareStatement(sql);
+				psmt.setString(1, i);
+				rs = psmt.executeQuery();
+				
+				NutritionFoodVO sample = null;
+				while(rs.next()) {
+					if(rs.getString(1) == "protein") {
+						sample = new NutritionFoodVO(,0,0,0,0,);
+						rs.getString(0)
+						
+					}else if(rs.getString(1) == "car") {
+						sample = new NutritionFoodVO(0,,0,0,0,);
+					}else if(rs.getString(1) == "fat") {
+						sample = new NutritionFoodVO(0,0,,0,0,);
+					}else if(rs.getString(1) == "vitabl") {
+						sample = new NutritionFoodVO(0,0,0,0,,0);
+						
+					}else {
+						sample = new NutritionFoodVO(0,0,0,,0,0);
+					}
+					
+					vo = sum(vo, sample);
+					
+				}
 			}
 			
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
 		
+	}
+	
+	public NutritionFoodVO sum (NutritionFoodVO vo1, NutritionFoodVO vo2){
+		return new NutritionFoodVO(vo1.getProtein()+vo2.getProtein(), vo1.getCarbohydrate()+vo2.getCarbohydrate(),
+				vo1.getFat()+vo2.getFat(), vo1.getMeneral()+vo2.getMeneral(), vo1.getVitamin()+vo2.getVitamin(), vo1.getCalory()+vo2.getCalory());
 	}
 	
 	
