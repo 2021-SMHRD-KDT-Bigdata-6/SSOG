@@ -43,7 +43,7 @@ var myLineChart = new Chart(ctx, {
           maxTicksLimit: 5
         },
         gridLines: {
-          color: "rgba(0, 0, 0, .125)",
+          color: "rgba(0, 0, 0, 0)",
         }
       }],
     },

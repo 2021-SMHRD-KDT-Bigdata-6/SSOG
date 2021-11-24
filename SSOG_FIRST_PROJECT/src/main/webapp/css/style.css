@@ -9183,8 +9183,8 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-  padding: 6em 0;
-  padding-bottom: 0;
+  padding-top: 96px;
+  padding-bottom: 96px;
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
