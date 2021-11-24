@@ -147,31 +147,29 @@
 		<div class="container">
 			<div id='category'>
 				<ul id='icons'>
-					<li><a href="#"><img src="img/icon_1.png">밥요리</a></li>
-					<li><a href="#"><img src="img/icon_2.png">국&탕</a></li>
-					<li><a href="#"><img src="img/icon_3.png">찌개&전골</a></li>
-					<li><a href="#"><img src="img/icon_4.png">밑반찬</a></li>
-					<li><a href="#"><img src="img/icon_5.png">볶음요리</a></li>
-					<li><a href="#"><img src="img/icon_6.png">구이(고기/생선)</a></li>
-					<li><a href="#"><img src="img/icon_7.png">찜&조림</a></li>
-					<li><a href="#"><img src="img/icon_8.png">손님상</a></li>
-					<li><a href="#"><img src="img/icon_9.png">아이반찬</a></li>
-					<li><a href="#"><img src="img/icon_10.png">김치 장아찌</a></li>
-					<li><a href="#"><img src="img/icon_11.png">도시락</a></li>
-					<li><a href="#"><img src="img/icon_12.png">튀김</a></li>
-					<li><a href="#"><img src="img/icon_13.png">면요리</a></li>
-					<li><a href="#"><img src="img/icon_14.png">샐러드</a></li>
-					<li><a href="#"><img src="img/icon_15.png">김밥&초밥</a></li>
-					<li><a href="#"><img src="img/icon_16.png">야식&술안주</a></li>
-					<li><a href="#"><img src="img/icon_17.png">스파게티</a></li>
-					<li><a href="#"><img src="img/icon_18.png">간식/분식</a></li>
-					<li><a href="#"><img src="img/icon_19.png">토스트/샌드위치</a></li>
-					<li><a href="#"><img src="img/icon_20.png">베이킹</a></li>
-					<li><a href="#"><img src="img/icon_21.png">디저트</a></li>
-					<li><a href="#"><img src="img/icon_22.png">주스&음료</a></li>
-					<li><a href="#"><img src="img/icon_23.png">술&칵테일</a></li>
-					<li><a href="#"><img src="img/icon_24.png">명절요리</a></li>
-					<li><a href="#"><img src="img/icon_25.png">기타요리</a></li>
+					<li><a href="#"><img src="img/icon_1.png">밥/죽</a></li>
+					<li><a href="#"><img src="img/icon_2.png">면류/만두</a></li>
+					<li><a href="#"><img src="img/icon_3.png">국/탕 </a></li>
+					<li><a href="#"><img src="img/icon_4.png">찌개/전골</a></li>
+					<li><a href="#"><img src="img/icon_5.png">구이</a></li>
+					<li><a href="#"><img src="img/icon_6.png">찜/조림</a></li>
+					<li><a href="#"><img src="img/icon_7.png">볶음</a></li>
+					<li><a href="#"><img src="img/icon_8.png">튀김</a></li>
+					<li><a href="#"><img src="img/icon_9.png">무침/부침/냉채</a></li>
+					<li><a href="#"><img src="img/icon_10.png">김치/젓갈/장아찌</a></li>
+					<li><a href="#"><img src="img/icon_11.png">샐러드/수프</a></li>
+					<li><a href="#"><img src="img/icon_12.png">피자/스테이크</a></li>
+					<li><a href="#"><img src="img/icon_13.png">스파게티/파스타</a></li>
+					<li><a href="#"><img src="img/icon_14.png">잼/드레싱/소스</a></li>
+					<li><a href="#"><img src="img/icon_15.png">떡/빵</a></li>
+					<li><a href="#"><img src="img/icon_16.png">샌드위치/토스트 </a></li>
+					<li><a href="#"><img src="img/icon_17.png">무스/푸딩/크림</a></li>
+					<li><a href="#"><img src="img/icon_18.png">커피/차</a></li>
+					<li><a href="#"><img src="img/icon_19.png">주스/건강음료</a></li>
+					<li><a href="#"><img src="img/icon_20.png">빙과/유제품</a></li>
+					<li><a href="#"><img src="img/icon_21.png">주류</a></li>
+					<li><a href="#"><img src="img/icon_22.png">장/조미료/가루</a></li>
+					<li><a href="#"><img src="img/icon_23.png">기타요리</a></li>
 				</ul>
 			</div>
 		</div>
