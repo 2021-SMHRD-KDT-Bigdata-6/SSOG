@@ -77,7 +77,7 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.html" class="nav-link">home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">회사소개</a></li>
+	          <li class="nav-item"><a href="g_about.jsp" class="nav-link">회사소개</a></li>
 	          <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">추천상품</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
@@ -91,8 +91,8 @@
               <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">커뮤니티</a>
               <div class="dropdown-menu" aria-labelledby="dropdown05">
               	<a class="dropdown-item" href="HappyCook.html">해피COOK</a>
-                <a class="dropdown-item" href="blog-single2.html">포이즌COOK</a>
-	          <li class="nav-item"><a href="contact.html" class="nav-link"></a></li>
+                <a class="dropdown-item" href="PoisonCook.html">포이즌COOK</a>
+	          <li class="nav-item"><a href="index2.html" class="nav-link">물가 정보</a></li>
 	        </ul>
 	      </div>
 	    </div>

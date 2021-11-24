@@ -3,8 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon" sizes="16x16">
+	<link rel="shortcut icon" href="img/favicon.ico">
     <title>회원가입</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -49,6 +48,12 @@
     .genderM2{
     	margin-bottom : 2rem;
     }
+    #btnSt{
+    	margin-left : 1rem;
+    	background-color : #f7f7f7;
+    	border : 1px solid #a5a5a5;
+    	
+    }
     .footM{
     	margin-top : 100px;
     }
@@ -76,13 +81,13 @@
     	<div class="container">
     		<div class="row justify-content-center">
           <div class="col-xl-10 ftco-animate">
-						<form action="#" class="billing-form">
+						<form action="JoinService" method="post" class="billing-form">
 							<!-- <h3 class="mb-4 billing-heading align">물가의 고수</h3> -->
 	          	<div class="row align-items-end">
 	          		<div class="col-md-6 auto">
 	                <div class="form-group">
-	                	<label for="firstname">아이디</label>
-	                  <input name='id' type="text" class="form-control" placeholder="아이디를 입력해주세요.">
+	                	<label for="firstname">아이디</label><input id="btnSt" type="button" value="중복체크" onclick="IdCheck()">
+	                  <input name='id' id="idCheck" type="text" class="form-control" placeholder="아이디를 입력해주세요.">
 	                </div>
 	              </div>
 				<div class="w-100"></div>
@@ -117,8 +122,8 @@
 		            <div class="col-md-6 auto">
 		            	<div class="form-group genderM2">
 	                	<label for="streetaddress">성별</label>
-		                  <span class='genderM'><input type="radio" name='gender'>남자</span>
-		                  <span><input type="radio" name='gender'>여자</span>
+		                  <span class='genderM'><input type="radio" name='gender' value="남">남자</span>
+		                  <span><input type="radio" name='gender' value="여">여자</span>
 	                </div>
 		            </div>
 		            
@@ -162,6 +167,39 @@
   <script src="js/google-map.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
   <script src="js/main.js"></script>
-    
+
+  <script>
+				function IdCheck(){
+					//var input = document.getElementById('input_e');
+					//alert(input.value)
+					//vlaue : input태그에 적어진 값 
+					//innerHTML : 태그 사이에 있는 html 문서 <p><span>b</span>a</p>
+					//innerText : 태그 사이에 있는 text
+					var input = $('#idCheck').val()
+					
+					$.ajax({
+						type : "post",	//데이터 전송방식
+						data : {id : input},		//서버로 전송할 데이터
+						url : "idCheckService",	//서버경로
+						dataType : "text",	//응답받을 데이터 타입(JSON)
+						success : function(data){
+							if(data=="true"){ 	//있는 아이디
+								alert('사용이 불가능한 아이디 입니다')
+								
+							}else{	//없는 아이디
+								alert('사용 가능한 아이디 입니다')
+								
+							}
+						},
+						error : function(){
+							alert('실패!')
+						}
+						
+					})
+				}
+			
+			
+	</script>
+			
   </body>
 </html>

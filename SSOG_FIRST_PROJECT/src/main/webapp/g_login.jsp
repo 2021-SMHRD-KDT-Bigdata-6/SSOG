@@ -69,20 +69,20 @@
     	<div class="container">
     		<div class="row justify-content-center">
           <div class="col-xl-10 ftco-animate">
-						<form action="#" class="billing-form">
+						<form action="LoginService" method="post" class="billing-form">
 							<h3 class="mb-4 billing-heading align">물가의 고수</h3>
 	          	<div class="row align-items-end">
 	          		<div class="col-md-6 auto">
 	                <div class="form-group">
 	                	<label for="firstname">아이디</label>
-	                  <input type="text" class="form-control" placeholder="아이디를 입력해주세요.">
+	                  <input name="id" type="text" class="form-control" placeholder="아이디를 입력해주세요.">
 	                </div>
 	              </div>
 				<div class="w-100"></div>
 		            <div class="col-md-6 auto">
 		            	<div class="form-group">
 	                	<label for="streetaddress">비밀번호</label>
-	                  <input type="password" class="form-control" placeholder="비밀번호를 입력해주세요.">
+	                  <input name="pw" type="password" class="form-control" placeholder="비밀번호를 입력해주세요.">
 	                </div>
 		            </div>
 		            
@@ -93,14 +93,14 @@
 		        	
 		        <div class="w-100"></div>
 		        	<div class="cart-detail p-3 p-md-4" id="buttonSize">
-	              		<p><a href="#"class="btn btn-primary py-3 px-4">회원가입</a></p>
+	              		<p><a href="g_join.jsp"class="btn btn-primary py-3 px-4">회원가입</a></p>
 	            	</div>
 	             
                 <div class="w-100"></div>
 		            
 	            </div>
 	          </form><!-- END -->
-
+				<a href="g_update.jsp">회원정보수정</a>
           </div> <!-- .col-md-8 -->
         </div>
     	</div>
