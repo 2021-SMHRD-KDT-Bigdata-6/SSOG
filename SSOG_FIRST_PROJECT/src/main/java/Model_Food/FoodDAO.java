@@ -157,6 +157,71 @@ public class FoodDAO {
 		return top;
 	}
 	
+	public ArrayList<String[]> getFoodMainIngre(String food_name) {
+		get_conn();
+		ArrayList<String[]> main = new ArrayList<String[]>();
+		try {
+			String sql = "select ingre_name, ingre_quantity from t_foodingredient where f_name = ? and main_sub = 'main'";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, food_name);
+			rs = psmt.executeQuery();
+			String[] sample= new String[2]; 
+			while(rs.next()) {
+				sample[0] =rs.getString(1);
+				sample[1] =rs.getString(2);
+				main.add(sample);	
+			}
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return main;
+	}
+	
+	
+	public ArrayList<String[]> getFoodSubIngre(String food_name) {
+		get_conn();
+		ArrayList<String[]> sub = new ArrayList<String[]>(); 
+		try {
+			
+			
+			String sql = "select ingre_name, ingre_quantity from t_foodingredient where f_name = ? and main_sub = 'sub'";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, food_name);
+			rs = psmt.executeQuery();
+			String[] sample1= new String[2]; 
+			while(rs.next()) {
+				sample1[0] =rs.getString(1);
+				sample1[1] =rs.getString(2);
+				sub.add(sample1);	
+			}
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return sub;
+	}
+	
+	public ArrayList<String> getCategoriFood(String categori) {
+		get_conn();
+		ArrayList<String> result = new ArrayList<String>();
+		try {
+			String sql = "select f_name from t_food where f_category like ?";
+			psmt =conn.prepareStatement(sql);
+			psmt.setString(1, "%"+categori);
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				result.add(rs.getString(1));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
 	
 	
 	
