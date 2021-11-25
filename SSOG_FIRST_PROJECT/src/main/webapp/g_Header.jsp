@@ -92,10 +92,10 @@
               <div class="dropdown-menu" aria-labelledby="dropdown05">
               	<a class="dropdown-item" href="HappyCook.jsp">해피COOK</a>
                 <a class="dropdown-item" href="PoisonCook.jsp">포이즌COOK</a>
+                <a class="dropdown-item" href="g_writerBoard.jsp">게시글작성</a>
                 </div>
                </li>
 	          <li class="nav-item"><a href="mulga.jsp" class="nav-link">물가 정보</a></li>
-                <a class="dropdown-item" href="g_writerBoard.jsp">게시글작성</a>
 	        </ul>
 	      </div>
 	    </div>

@@ -49,10 +49,11 @@ public class RecipeDAO {
 		get_conn();
 		try {
 
-			String sql = "select r_order, r_content, r_img, r_etc from t_recipe where f_name = ?";
+			String sql = "select r_order, r_content, r_img, r_etc from t_recipe where f_name = ? order by r_order";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, food_name);
-			ArrayList<RecipeSubVO> samples = null;
+			ArrayList<RecipeSubVO> samples = new ArrayList<>();
+			rs = psmt.executeQuery();
 			rs.next();
 			String surl= rs.getString("r_img");
 			surl= surl.substring(surl.indexOf("webapp")+7);

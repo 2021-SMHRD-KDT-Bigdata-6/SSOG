@@ -1,3 +1,7 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="Model_Recipe.RecipeSubVO"%>
+<%@page import="Model_Recipe.RecipeVO"%>
+<%@page import="Controller.Controller_food"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -49,6 +53,12 @@
     </style>
   </head>
   <body>
+  <%
+  	String fName = request.getParameter("fName");
+  	Controller_food conf = new Controller_food();
+  	//RecipeVO result = conf.getRecipe("fName");
+  %>
+  
 	<div>
     	<jsp:include page="g_Header.jsp" flush="true" />
     </div>
@@ -70,10 +80,10 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-lg-6 mb-5 ftco-animate">
-    				<a href="img/1.jpg" class="image-popup prod-img-bg"><img src="img/1.jpg" class="img-fluid" alt="Colorlib Template"></a>
+    				<a href="<%=conf.getImgUrl(fName) %>" class="image-popup prod-img-bg"><img src="<%=conf.getImgUrl(fName) %>" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
-    				<h3>마늘종장아찌 볶음밥</h3>
+    				<h3><%=fName %></h3>
     				<div class="rating d-flex">
 							<p class="text-left mr-4">
 								<a href="#" class="mr-2">난이도</a>
@@ -85,9 +95,11 @@
 								<a href="#" class="mr-2" style="color: #000;">소요시간 <span style="color: #bbb;">20분</span></a>
 							</p>
 						</div>
-    				<p class="price"><span>고추장 양념에 빨갛게 무쳐 먹던 마늘종을<br>햄과 함께 달달 볶았어요.</span></p>
-    				<p><strong>재료</strong></p>
-						<p>마늘종장아찌(1줌=50g), 통조림 햄(1/4개=50g), 마늘(2쪽), 밥(1공기), 달걀(1개)</p>
+    				<!-- <p class="price"><span>고추장 양념에 빨갛게 무쳐 먹던 마늘종을<br>햄과 함께 달달 볶았어요.</span></p> -->
+    				<p><strong>주재료</strong></p>
+						<p><%=conf.getMainIngre(fName) %></p>
+    				<p><strong>부재료</strong></p>
+						<p><%=conf.getSubIngre(fName) %></p>
 
 						
 						<div class="row mt-4">
@@ -130,27 +142,33 @@
 
               <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="day-1-tab">
               	<div class="p-4">
-	              	<h3 class="mb-4">마늘종장아찌 볶음밥</h3>
-	              	<p>1. 마늘종장아찌는 1cm 길이로 썰고, 통조림 햄은 잘게 썰고, 마늘은 납작 썰고,
-						2. 중간 불로 달군 팬에 식용유(1)를 둘러 잘게 썬 햄을
-						3분간 볶은 뒤 키친타월에 밭쳐 기름을 제거하고,
-						tip 식용유에 햄을 구우면 동물성 기름이 녹아 나와요.
-						3. 중간 불로 달군 팬에 식용유(1)를 둘러
-						납작 썬 마늘을 넣고 1분간 볶은 뒤
-						밥을 넣어 3분간 고루 볶고,
-						
-						4. 볶은 햄, 마늘종장아찌, 양념을 넣어 3분간 볶고,
-						
-						5. 중간 불로 달군 팬에 식용유(2)를 두른 뒤
-						달걀을 넣어 달걀프라이를 만들고,
-						
-						6. 그릇에 볶음밥을 담고 달걀프라이를 얹어 마무리.</p>
+	              	<h3 class="mb-4"><%=fName %></h3>
+	              	<p>
+	              	
+	              	<%
+	              	ArrayList<RecipeSubVO> sample =(conf.getRecipe(fName)).getRecipes();
+	              	for(int i = 0; i< sample.size(); i++) {
+	   
+	              		%><%=sample.get(i).getR_content()
+	              	%> <br>	
+	              	<%
+	              	
+	              	}
+	              	 %>
+	              	 </p>
+
+
+
+	              	
+	              	
+	              	
+	              	
               	</div>
               </div>
 
               <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-day-2-tab">
               	<div class="p-4">
-	              	<h3 class="mb-4">마늘종장아찌 볶음밥 영양정보</h3>
+	              	<h3 class="mb-4"><%=fName %> 영양정보</h3>
 	              	<div id="chartBox"><canvas id="radarChart"></canvas></div>
               	</div>
               </div>

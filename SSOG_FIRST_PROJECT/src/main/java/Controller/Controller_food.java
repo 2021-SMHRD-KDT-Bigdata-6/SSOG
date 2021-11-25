@@ -3,17 +3,28 @@ package Controller;
 import java.util.ArrayList;
 
 import Model_Food.FoodDAO;
+import Model_Nutrition.NutritionFoodDAO;
 import Model_Recipe.RecipeDAO;
 import Model_Recipe.RecipeVO;
 
 public class Controller_food {
 	private FoodDAO foodDao = new FoodDAO();
 	private RecipeDAO recipeDao = new RecipeDAO();
-	
+	private NutritionFoodDAO nuDao = new NutritionFoodDAO();
 	public void close() {
 		foodDao.close();
 		recipeDao.close();
 	}
+	
+	
+	public NutritionFoodVO getNutrition(String food_name) {
+		return  nuDao.makeNutrition (food_name)
+		
+	}
+	
+	
+	
+	
 	
 	//f_index 도출
 	public void updateF_index() {
@@ -23,9 +34,13 @@ public class Controller_food {
 	public String getImgUrl(String food_name) {
 		String url = foodDao.getUrl(food_name);
 		url = url.substring(url.indexOf("webapp")+7);
+		
+		
 		return url;
 		
 	}
+	
+	
 	//food recipe 정리하기!
 	public RecipeVO getRecipe(String food_name) {
 		return recipeDao.getRecipe(food_name);

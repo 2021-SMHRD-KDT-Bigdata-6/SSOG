@@ -124,6 +124,7 @@ public class FoodDAO {
          psmt.setString(1,fname);
          rs = psmt.executeQuery();
          if(rs.next()) {
+        	 
             url = rs.getString(1);
             System.out.println("url 가져오기 성공!");
          }else {
@@ -187,7 +188,7 @@ public class FoodDAO {
       get_conn();
       String category = "";
       try {
-         String sql = "select category from t_food where f_name = ?";
+         String sql = "select f_category from t_food where f_name = ?";
          psmt = conn.prepareStatement(sql);
          psmt.setString(1, food_name);
          rs = psmt.executeQuery();

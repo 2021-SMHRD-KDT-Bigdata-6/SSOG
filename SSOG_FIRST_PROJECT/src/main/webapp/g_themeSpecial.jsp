@@ -1,3 +1,8 @@
+<%@page import="java.util.Random"%>
+<%@page import="jdk.internal.misc.FileSystemOption"%>
+<%@page import="Controller.Controller_food"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Model_Food.FoodDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -82,6 +87,17 @@
     </style>
   </head>
   <body>
+  <%
+  	Random ran = new Random();
+  	Controller_food dao = new Controller_food();
+  	ArrayList<String> result = dao.getFoodInCategori("밥");
+  	System.out.println(result.get(1));
+  	
+  	//String[] fcate = new String[23] ;
+  	
+  	
+  %>
+  
 	<div>
    		<jsp:include page="g_Header.jsp" flush="true"></jsp:include>
     </div>
@@ -147,29 +163,29 @@
 		<div class="container">
 			<div id='category'>
 				<ul id='icons'>
-					<li><a href="#"><img src="img/icon_1.png">밥/죽</a></li>
-					<li><a href="#"><img src="img/icon_2.png">면류/만두</a></li>
-					<li><a href="#"><img src="img/icon_3.png">국/탕 </a></li>
-					<li><a href="#"><img src="img/icon_4.png">찌개/전골</a></li>
-					<li><a href="#"><img src="img/icon_5.png">구이</a></li>
-					<li><a href="#"><img src="img/icon_6.png">찜/조림</a></li>
-					<li><a href="#"><img src="img/icon_7.png">볶음</a></li>
-					<li><a href="#"><img src="img/icon_8.png">튀김</a></li>
-					<li><a href="#"><img src="img/icon_9.png">무침/부침/냉채</a></li>
-					<li><a href="#"><img src="img/icon_10.png">김치/젓갈/장아찌</a></li>
-					<li><a href="#"><img src="img/icon_11.png">샐러드/수프</a></li>
-					<li><a href="#"><img src="img/icon_12.png">피자/스테이크</a></li>
-					<li><a href="#"><img src="img/icon_13.png">스파게티/파스타</a></li>
-					<li><a href="#"><img src="img/icon_14.png">잼/드레싱/소스</a></li>
-					<li><a href="#"><img src="img/icon_15.png">떡/빵</a></li>
-					<li><a href="#"><img src="img/icon_16.png">샌드위치/토스트 </a></li>
-					<li><a href="#"><img src="img/icon_17.png">무스/푸딩/크림</a></li>
-					<li><a href="#"><img src="img/icon_18.png">커피/차</a></li>
-					<li><a href="#"><img src="img/icon_19.png">주스/건강음료</a></li>
-					<li><a href="#"><img src="img/icon_20.png">빙과/유제품</a></li>
-					<li><a href="#"><img src="img/icon_21.png">주류</a></li>
-					<li><a href="#"><img src="img/icon_22.png">장/조미료/가루</a></li>
-					<li><a href="#"><img src="img/icon_23.png">기타요리</a></li>
+					<li class="fcategory" value="밥"><a href="#"><img src="img/icon_1.png">밥/죽</a></li>
+					<li class="fcategory" value="면류"><a href="#"><img src="img/icon_2.png">면류/만두</a></li>
+					<li class="fcategory" value="국"><a href="#"><img src="img/icon_3.png">국/탕 </a></li>
+					<li class="fcategory" value="찌개"><a href="#"><img src="img/icon_4.png">찌개/전골</a></li>
+					<li class="fcategory" value="구이"><a href="#"><img src="img/icon_5.png">구이</a></li>
+					<li class="fcategory" value="찜"><a href="#"><img src="img/icon_6.png">찜/조림</a></li>
+					<li class="fcategory" value="볶음"><a href="#"><img src="img/icon_7.png">볶음</a></li>
+					<li class="fcategory" value="튀김"><a href="#"><img src="img/icon_8.png">튀김</a></li>
+					<li class="fcategory" value="무침"><a href="#"><img src="img/icon_9.png">무침/부침/냉채</a></li>
+					<li class="fcategory" value="김치"><a href="#"><img src="img/icon_10.png">김치/젓갈/장아찌</a></li>
+					<li class="fcategory" value="샐러드"><a href="#"><img src="img/icon_11.png">샐러드/수프</a></li>
+					<li class="fcategory" value="스테이크"><a href="#"><img src="img/icon_12.png">피자/스테이크</a></li>
+					<li class="fcategory" value="스파게티"><a href="#"><img src="img/icon_13.png">스파게티/파스타</a></li>
+					<li class="fcategory" value="잼"><a href="#"><img src="img/icon_14.png">잼/드레싱/소스</a></li>
+					<li class="fcategory" value="빵"><a href="#"><img src="img/icon_15.png">떡/빵</a></li>
+					<li class="fcategory" value="샌드위치"><a href="#"><img src="img/icon_16.png">샌드위치/토스트 </a></li>
+					<li class="fcategory" value="크림"><a href="#"><img src="img/icon_17.png">무스/푸딩/크림</a></li>
+					<li class="fcategory" value="커피"><a href="#"><img src="img/icon_18.png">커피/차</a></li>
+					<li class="fcategory" value="주스"><a href="#"><img src="img/icon_19.png">주스/건강음료</a></li>
+					<li class="fcategory" value="빙과"><a href="#"><img src="img/icon_20.png">빙과/유제품</a></li>
+					<li class="fcategory" value="주류"><a href="#"><img src="img/icon_21.png">주류</a></li>
+					<li class="fcategory" value="장류"><a href="#"><img src="img/icon_22.png">장/조미료/가루</a></li>
+					<li class="fcategory" value="기타"><a href="#"><img src="img/icon_23.png">기타요리</a></li>
 				</ul>
 			</div>
 		</div>
@@ -197,11 +213,12 @@
 							</div>
 						</div>
 						<div class="row">
-						<%for(int i = 1; i <= 12; i++ ){ %>
+						<%for(int i = 1; i <= 12; i++ ){ 
+							int num = ran.nextInt(20);%>
 							<div class="col-md-4 d-flex">
-								<a href="g_recipe.jsp">
+								<a href="g_recipe.jsp?fName=<%=result.get(num) %>">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(img/<%=i %>.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=dao.getImgUrl(result.get(num))%>);">
 										<div class="desc">
 											<!-- <p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -211,8 +228,8 @@
 										</div>
 									</div>
 									<div class="text text-center" style="width: 315px;">
-										<span class="category">한식</span>
-										<h2>된장찌개 한상</h2>
+										<span class="category"><%=dao.showCategori(result.get(num)) %></span>
+										<h2><%=result.get(num) %></h2>
 										
 									</div>
 								</div>
@@ -269,6 +286,16 @@
   <script src="js/google-map.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+  	let category = document.getElementsByClass('fcategory');
+  	
+  	category.onclick = function(){
+  		category
+  		
+  	}
+  	
+  	
+  </script>
     
   </body>
 </html>
