@@ -1,3 +1,5 @@
+<%@page import="Model_Food.FoodVO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Random"%>
 <%@page import="Controller.Controller_food"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -25,7 +27,7 @@
     	color: white;
     }
     #subTitle{
-    	color: black;
+    	color: #b7472a;
     }
     #bordercolor{
     border: 1px solid rgba(0, 0, 0, 0.7);
@@ -44,10 +46,12 @@
     
   </head>
   <body>
- 	<% String[] top100=(String[])session.getAttribute("top100"); 
+ 	<% 
  	  Controller_food food = new Controller_food();
  	  Random ran = new Random();
- 	  int top =ran.nextInt(100);%>
+ 	  int top =ran.nextInt(100);
+ 	  String[] top100 = food.Top100();
+ 	  %>
  	
  	
  	
@@ -118,7 +122,7 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">home</a></li>
+	          <li class="nav-item active"><a href="index.jsp" class="nav-link">home</a></li>
 	          <li class="nav-item"><a href="g_about.jsp" class="nav-link">회사소개</a></li>
 	          <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">추천상품</a>
@@ -132,9 +136,9 @@
               <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">커뮤니티</a>
               <div class="dropdown-menu" aria-labelledby="dropdown05">
-              	<a class="dropdown-item" href="HappyCook.html">해피COOK</a>
-                <a class="dropdown-item" href="PoisonCook.html">포이즌COOK</a>
-	          <li class="nav-item"><a href="index2.html" class="nav-link">물가정보</a></li>
+              	<a class="dropdown-item" href="HappyCook.jsp">해피COOK</a>
+                <a class="dropdown-item" href="PoisonCook.jsp">포이즌COOK</a>
+	          <li class="nav-item"><a href="mulga.jsp" class="nav-link">물가정보</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -169,9 +173,13 @@
           </div>
         </div>
 				<div class="row">
+					
+					<%--반복될 것 --%>
+					<%for(int i = 0; i < 4; i++){ %>
 					<div class="col-md-3 d-flex">
 						<div class="product ftco-animate">
 						<%String name1 = top100[ran.nextInt(100)];%>
+						<%String category = food.showCategori(name1); %>
 							<div class="img d-flex align-items-center justify-content-center">
 							<img src="<%=food.getImgUrl(name1)%>">
 								<div class="desc">
@@ -184,74 +192,17 @@
 							</div>
 							<div class="text text-center">
 								<span class="seller">Best Seller</span>
-								<span class="category">볶음밥</span>
+								<span class="category"><%=category %></span>
 								<h2><%=name1%></h2>
-								<span class="price">$69.00</span>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 d-flex">
-						<div class="product ftco-animate">
-						<%String name2 = top100[ran.nextInt(100)];%>
-							<div class="img d-flex align-items-center justify-content-center">
-							<img src="<%=food.getImgUrl(name2)%>">
-								<div class="desc">
-									<p class="meta-prod d-flex">
-										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
-										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
-										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
-									</p>
-								</div>
-							</div>
-							<div class="text text-center">
-								<span class="seller">Best Seller</span>
-								<span class="category">볶음밥</span>
-								<h2><%=name2%></h2>
-								<span class="price">$69.00</span>
-							</div>
-						</div>
+					<%} %>
+					
+					<%-- --%>
 					</div>
-					<div class="col-md-3 d-flex">
-						<div class="product ftco-animate">
-						<%String name3 = top100[ran.nextInt(100)];%>
-							<div class="img d-flex align-items-center justify-content-center">
-							<img src="<%=food.getImgUrl(name3)%>">	
-								<div class="desc">
-									<p class="meta-prod d-flex">
-										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
-										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
-										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
-									</p>
-								</div>
-							</div>
-							<div class="text text-center">
-								<span class="new">New Arrival</span>
-								<span class="category">전골</span>
-								<h2><%=name3 %></h2>
-								<span class="price">$69.00</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 d-flex">
-						<div class="product ftco-animate">
-						<%String name4 = top100[ran.nextInt(100)];%>
-							<div class="img d-flex align-items-center justify-content-center">
-							<img src="<%=food.getImgUrl(name4)%>">	
-								<div class="desc">
-									<p class="meta-prod d-flex">
-										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
-										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
-										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
-									</p>
-								</div>
-							</div>
-							<div class="text text-center">
-								<span class="category">가정식</span>
-								<h2><%=name4 %></h2>
-								<span class="price">$69.00</span>
-							</div>
-						</div>
-					</div>
+				</div>
+			
 		</section>
 		
 		

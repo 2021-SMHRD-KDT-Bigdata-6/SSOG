@@ -1,3 +1,4 @@
+<%@page import="Model_Food.FoodVO"%>
 <%@page import="Model_Food.FoodDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -13,21 +14,23 @@ DB : 카테고리가 무엇인지?
 
 --%>
 <%
-DAO dao = new DAO();
-ArrayList<FoodVO> foods = dao.foods();
+
+
+FoodDAO dao = new FoodDAO(); 
+ArrayList<FoodVO> ingres = dao.getCategoriName();
 
 String cate = request.getParameter("cate");
 
 ArrayList<FoodVO> arr = new ArrayList<FoodVO>();
 
-if( cate == null){
-   arr = foods;
+if(cate == null){
+   arr = ingres;
 }else{
-   for(int i = 0; i < foods.size(); i++){
+   for(int i = 0; i < ingres.size(); i++){
       
-      if(foods.get(i).getCategory().equals(cate)){
+      if(ingres.get(i).getCategory().equals(cate)){
          
-         arr.add(foods.get(i));
+         arr.add(ingres.get(i));
          
       }
       

@@ -36,7 +36,7 @@
 		</div>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">물가의고수 <span>store</span></a>
+	      <a class="navbar-brand" href="index.jsp">물가의고수 <span>store</span></a>
 	      <div class="order-lg-last btn-group">
           <a href="#" class="btn-cart dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           	<span class="flaticon-shopping-bag"></span>
@@ -92,7 +92,7 @@
               <div class="dropdown-menu" aria-labelledby="dropdown05">
               	<a class="dropdown-item" href="HappyCook.jsp">해피COOK</a>
                 <a class="dropdown-item" href="PoisonCook.jsp">포이즌COOK</a>
-	          <li class="nav-item"><a href="index2.jsp" class="nav-link">물가 정보</a></li>
+	          <li class="nav-item"><a href="mulga.jsp" class="nav-link">물가 정보</a></li>
 	        </ul>
 	      </div>
 	    </div>
