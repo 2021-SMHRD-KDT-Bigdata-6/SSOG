@@ -28,7 +28,7 @@ public class Controller_Ingredient {
 	//해당재료 이미지 가져오기
 	public String getImgUrl(String ingre_name) {
 		String url = ingredientDao.getImgUrl(ingre_name);
-		url = url.substring(url.indexOf("webapp")+6);
+		url = url.substring(url.indexOf("webapp")+7);
 		return url;
 	}
 	//ingre_name 가격 역사~ 모두 조회
