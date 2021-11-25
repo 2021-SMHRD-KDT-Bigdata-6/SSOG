@@ -139,6 +139,9 @@ public class FoodDAO {
 	}
 	
 	
+	
+	
+	
 	public String[] Top100() {
 		String[] top = new String[100];
 		get_conn();
@@ -177,6 +180,26 @@ public class FoodDAO {
 		}
 		
 		return main;
+	}
+	
+	
+	public String getCategoriName(String food_name) {
+		get_conn();
+		String category = "";
+		try {
+			String sql = "select category from t_food where f_name = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, food_name);
+			rs = psmt.executeQuery();
+			rs.next();
+			category = rs.getString(1);
+			int idx = category.indexOf(">");
+			category = category.substring(idx+1);
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return category;
 	}
 	
 	

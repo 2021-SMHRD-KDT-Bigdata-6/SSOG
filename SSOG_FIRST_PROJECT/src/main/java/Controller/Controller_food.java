@@ -64,6 +64,10 @@ public class Controller_food {
 		
 	}
 	
+	public String showCategori(String food_name) {
+		return foodDao.getCategoriName(food_name)
+	}
+	
 
 	private void insert() {}
 	private void update() {}
