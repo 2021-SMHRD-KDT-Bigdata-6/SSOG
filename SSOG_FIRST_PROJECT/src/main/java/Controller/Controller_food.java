@@ -65,7 +65,7 @@ public class Controller_food {
 	}
 	
 	public String showCategori(String food_name) {
-		return foodDao.getCategoriName(food_name)
+		return foodDao.getCategoriName(food_name);
 	}
 	
 

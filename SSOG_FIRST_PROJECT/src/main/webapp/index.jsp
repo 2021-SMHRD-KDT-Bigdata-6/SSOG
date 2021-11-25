@@ -172,8 +172,8 @@
 					<div class="col-md-3 d-flex">
 						<div class="product ftco-animate">
 						<%String name1 = top100[ran.nextInt(100)];%>
-							<div  class="img d-flex align-items-center justify-content-center">
-							 <img src="<%=food.getImgUrl(name1)%>"> -
+							<div class="img d-flex align-items-center justify-content-center">
+							<img src="<%=food.getImgUrl(name1)%>">
 								<div class="desc">
 									<p class="meta-prod d-flex">
 										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -182,11 +182,11 @@
 									</p>
 								</div>
 							</div>
-							<div class="">
-								
-								<span class="category">ÇØ»ê¹°¿ä¸®</span>
-								<h2 align="center"><%=name1%></h2>
-								<p class="mb-0"><span class="price price-sale">$69.00</span> <span class="price">$49.00</span></p>
+							<div class="text text-center">
+								<span class="seller">Best Seller</span>
+								<span class="category">ººÀ½¹ä</span>
+								<h2><%=name1%></h2>
+								<span class="price">$69.00</span>
 							</div>
 						</div>
 					</div>
