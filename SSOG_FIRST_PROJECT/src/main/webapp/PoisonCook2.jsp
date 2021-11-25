@@ -1,9 +1,12 @@
+<%@page import="model_board.BoardVO"%>
+<%@page import="model_board.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Liquor Store - Free Bootstrap 4 Template by Colorlib</title>
+  	<link rel="shortcut icon" href="img/favicon.ico">
+    <title>Æ÷ÀÌÁðCook</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -34,7 +37,16 @@
     
   </head>
   <body>
+  <%
+  	String seq_num = request.getParameter("num");
+  	BoardDAO dao = new BoardDAO();
+  	BoardVO vo = dao.showOne(seq_num);
+  
+  
+  %>
+
 <!-- Æ÷ÀÌÁðCOOK -->
+
   	<div>
   		<jsp:include page="g_Header.jsp"></jsp:include>
   	</div>
@@ -57,13 +69,13 @@
         <div class="row">
           <div class="col-lg-8 ftco-animate">
           	<p>
-              <img src="images/image_1_1.jpg" alt="" class="img-fluid">
+              <img src="fileUpload/<%=vo.getFileName()%>" alt="" class="img-fluid">
             </p>
             <div class="tagcloud" >
                 <a href="#" class="tag-cloud-link" >#Æ÷ÀÌÁðÄíÅ·</a>
               
               </div>
-            <p>¾êµé¾Æ</p>
+            <p><%=vo.getContent() %></p>
             <div class="sidebar-box ftco-animate">
             </div>
             
@@ -93,7 +105,7 @@
                 <img src="images/person_1.jpg" style=width:100px; alt="Image placeholder" class="img-fluid mb-4" id="bdrd">
               </div>
               <div class="desc">
-                <h3>¿ä¸®¿ÕÀÌµÇ°Ú¾î</h3>
+                <h3><%=vo.getWriter() %></h3>
                 <p>hi</p>
               </div>
             </div>

@@ -1,9 +1,13 @@
+<%@page import="model_board.BoardVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="model_board.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Liquor Store - Free Bootstrap 4 Template by Colorlib</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>Æ÷ÀÌÁðCook</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -36,7 +40,11 @@
     </style>
   </head>
   <body>
+<%
+	BoardDAO dao = new BoardDAO();
+	ArrayList<BoardVO> b_list = dao.showBoard("PoisonCook");
 
+%>
   	 <div>
     	<jsp:include page="g_Header.jsp"></jsp:include>
     </div>
@@ -56,7 +64,32 @@
     <section class="ftco-section">
       <div class="container">
         <div class="row d-flex">
-          <% for(int i=1;i<7;i++){%><div class="col-lg-6 d-flex align-items-stretch ftco-animate" style="padding-left: 0px;">
+        	<% for(int i = 0; i < b_list.size(); i++) {%>
+          <div class="col-lg-6 d-flex align-items-stretch ftco-animate" style="padding-left: 0px;">
+          	<div class="blog-entry d-md-flex">
+          		<a href="HappyCook2.jsp?num=<%=b_list.get(i).getNum() %>" class="block-20 img" style="background-image: url('fileUpload/<%=b_list.get(i).getFileName()%>');">
+              </a>
+              <div class="text p-4 bg-light" id="pdbtWhy">
+              	<div class="meta">
+              		<p><span class="fa fa-calendar"></span><%=b_list.get(i).getB_day() %></p>
+              	</div>
+                <h3 class="heading mb-3"><a href="#"><%=b_list.get(i).getTitle() %> </a></h3>
+               
+            <div class="about-author d-flex p-4 bg-light" id="specialWhy">
+              <div class="bio mr-5 md" style="height: 50px;width: 50px;">
+                <img src="images/person_1.jpg" style="width: 50px;" alt="Image placeholder" class="img-fluid mb-4 md" id="bdrd">
+              </div>
+              <div class="desc" style="display: flex; align-items: center; justify-content: center;">
+                <h3 id="gogi" style="margin-bottom: 0px;"><%=b_list.get(i).getWriter() %></h3>
+              </div>
+            </div>
+                <p></p>
+                <a href="#" class="btn-custom">Continue <span class="fa fa-long-arrow-right"></span></a>
+
+              </div>
+            </div>
+          </div><% }%>
+          <!-- <% for(int i = 1; i < 7; i++){%><div class="col-lg-6 d-flex align-items-stretch ftco-animate" style="padding-left: 0px;">
           	<div class="blog-entry d-md-flex">
           		<a href="PoisonCook2.jsp" class="block-20 img" style="background-image: url('images/image_<%=i %>_<%=i %>.jpg');">
               </a>
@@ -79,7 +112,7 @@
 
               </div>
             </div>
-          </div><% }%>
+          </div><% }%> -->
           <!-- <div class="col-lg-6 d-flex align-items-stretch ftco-animate" style="padding-left: 0px;">
           	<div class="blog-entry d-md-flex">
           		<a href="PoisonCook2.jsp" class="block-20 img" style="background-image: url('images/image_2_2.jpg');">

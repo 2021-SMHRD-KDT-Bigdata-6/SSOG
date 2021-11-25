@@ -54,7 +54,10 @@ public class RecipeDAO {
 			psmt.setString(1, food_name);
 			ArrayList<RecipeSubVO> samples = null;
 			rs.next();
-			samples.add(new RecipeSubVO (rs.getString("r_content"), rs.getString("r_img")));
+			String surl= rs.getString("r_img");
+			surl= surl.substring(surl.indexOf("webapp")+6);
+			
+			samples.add(new RecipeSubVO (rs.getString("r_content"), surl));
 			String r_etc =rs.getString("r_etc");
 			while(rs.next()) {
 				samples.add(new RecipeSubVO (rs.getString("r_content"), rs.getString("r_img")));				

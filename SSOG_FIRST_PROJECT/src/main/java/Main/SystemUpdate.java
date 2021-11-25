@@ -10,7 +10,7 @@ public class SystemUpdate {
 	public static void main(String[] args) {
 //		
 ////		System.out.println("test");
-//		Controller_Ingredient conIngre = new Controller_Ingredient();
+		Controller_Ingredient conIngre = new Controller_Ingredient();
 		Controller_food conFood = new Controller_food();
 //		//conIngre.insertAll("¿õ");
 ////		System.out.println("¾ßÈ£");
@@ -24,8 +24,9 @@ public class SystemUpdate {
 		System.out.println(conFood .getImgUrl("°è¶õººÀ½¹ä"));
 
 //48 57
-		System.out.println("1" +conFood.getImgUrl("È£µÎ¸êÄ¡ººÀ½"));
+		System.out.println("1" +conIngre.getImgUrl("°«/°«"));
 		
+
 
 	}
 
