@@ -1,9 +1,12 @@
+<%@page import="model_board.BoardVO"%>
+<%@page import="model_board.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Liquor Store - Free Bootstrap 4 Template by Colorlib</title>
+  	<link rel="shortcut icon" href="img/favicon.ico">
+    <title>해피Cook</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -34,7 +37,13 @@
     
   </head>
   <body>
+  <%
+  	String seq_num = request.getParameter("num");
+  	BoardDAO dao = new BoardDAO();
+  	BoardVO vo = dao.showOne(seq_num);
   
+  
+  %>
     <div>
     	<jsp:include page="g_Header.jsp"></jsp:include>
     </div>
@@ -59,9 +68,9 @@
         <div class="row">
           <div class="col-lg-8 ftco-animate">
           	<p>
-              <img src="images/image_1.jpg" alt="" class="img-fluid">
+              <img src="fileUpload/<%=vo.getFileName()%>" alt="" class="img-fluid">
             </p>
-            <div class="tagcloud" >
+            <!-- <div class="tagcloud" >
                 <a href="#" class="tag-cloud-link" >#겉바속촉</a>
                 <a href="#" class="tag-cloud-link" >#스테이크</a>
                 <a href="#" class="tag-cloud-link" >#요리자랑</a>
@@ -69,8 +78,8 @@
                 <a href="#" class="tag-cloud-link" >#저녁거리 해결</a>
                 <a href="#" class="tag-cloud-link" >#물꼬 </a>
                 <a href="#" class="tag-cloud-link" >#해피쿠킹</a>
-              </div>
-            <p>저녁식사로 간단하게 구워본 팬프라잉 스테이크~~ 겉은 바삭하고 속은 촉촉하고.. 진짜 맛있어요! 물꼬님들 저녁식사로 스테이크 강추bb</p>
+              </div> -->
+            <p><%=vo.getContent() %></p>
             <div class="sidebar-box ftco-animate">
             </div>
             
@@ -100,7 +109,7 @@
                 <img src="images/person_1.jpg" style=width:100px; alt="Image placeholder" class="img-fluid mb-4" id="bdrd">
               </div>
               <div class="desc">
-                <h3>고기식신이</h3>
+                <h3><%=vo.getWriter() %></h3>
                 <p>고기를 너무너무 좋아하는 자취러♡</p>
               </div>
             </div>
