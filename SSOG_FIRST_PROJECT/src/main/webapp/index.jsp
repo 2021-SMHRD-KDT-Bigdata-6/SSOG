@@ -75,7 +75,7 @@
 			    		</p>
 		        </div>
 		        <div class="reg">
-		        	<p class="mb-0"><a href="#" class="mr-2">회원가입</a> <a href="g_login.jsp">로그인</a></p>
+		        	<p class="mb-0"><a href="g_join.jsp" class="mr-2">회원가입</a> <a href="g_login.jsp">로그인</a></p>
 		        </div>
 					</div>
 				</div>
@@ -83,7 +83,7 @@
 		</div>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">물가의고수 <span>store</span></a>
+	      <a class="navbar-brand" href="index.jsp">물가의고수 <span>store</span></a>
 	      <div class="order-lg-last btn-group">
           <a href="#" class="btn-cart dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           	<span class="flaticon-shopping-bag"></span>
@@ -139,6 +139,7 @@
               <div class="dropdown-menu" aria-labelledby="dropdown05">
               	<a class="dropdown-item" href="HappyCook.jsp">해피COOK</a>
                 <a class="dropdown-item" href="PoisonCook.jsp">포이즌COOK</a>
+                <a class="dropdown-item" href="g_writerBoard.jsp">게시글작성</a>
 	          <li class="nav-item"><a href="mulga.jsp" class="nav-link">물가정보</a></li>
 	        </ul>
 	      </div>
@@ -153,7 +154,7 @@
           <div class="col-md-8 ftco-animate d-flex align-items-end">
           	<div class="text w-100 text-center">
 	            <h1 class="mb-4">신선, <span>알뜰,</span> 우리의 <span> 먹거리</span>.</h1>
-	            <p><a href="#" class="btn btn-primary py-2 px-4">구매하러 가기</a> <a href="#" class="btn btn-white btn-outline-white py-2 px-4">여긴 뭘 넣지</a></p>
+	            <p><a href="#" class="btn btn-primary py-2 px-4">구매하러 가기</a> <a href="#" class="btn btn-white btn-outline-white py-2 px-4"> S S O G </a></p>
             </div>
           </div>
         </div>
@@ -276,10 +277,12 @@
         <div class="row ftco-animate">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel ftco-owl">
-              <% for(int i=1;i<=6;i++){%><div class="item" >
+              <% for(int i=1;i<6;i++){
+            	  String[] arr = {"현진현진찌", "운비운비찌", "진웅진웅찌", "유경유경찌", "상윤상윤찌", "소연소연찌"};
+              %><div class="item" >
                 <div class="testimony-wrap py-4" id="bordercolor" style="text-align: center">
                 		<div style="width: 100%; height:203px;">
-                			<img src="./images/image_<%=i %>.jpg" style="width:100%; height:100%;"/>
+                			<a href="HappyCook.jsp"><img src="./images/image_<%=i %>.jpg" style="width:100%; height:100%;"/></a>
                 		</div>
                 		<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
                  		 <div class="text text2">
@@ -287,8 +290,8 @@
                    		 <div class="d-flex align-items-center">
                     		<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
                     		<div class="pl-3 text2">
-		                   	 	<p class="name">현진현진찌</p>
-		                    	<span class="position">Marketing Manager</span>
+		                   	 	<p class="name"><%=arr[i] %></p>
+		                    	<span class="position">새싹회원</span>
 		                  </div>
 	                  	</div>
                   </div>
@@ -312,10 +315,12 @@
         <div class="row ftco-animate">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel ftco-owl">
-              <% for(int i=1;i<6;i++){%><div class="item">
+              <% for(int i=1;i<6;i++){
+              	String[] arr = {"진웅진웅찌", "유경유경찌", "상윤상윤찌", "소연소연찌", "운비운비찌", "현진현진찌"};
+              %><div class="item">
                 <div class="testimony-wrap py-4" id="bordercolor" style="text-align:center">
                 		<div style="width: 100%; height:203px;">
-                			<img src="./images/image_<%=i %>_<%=i %>.jpg" style="width:100%; height:100%;"/>
+                			<a href="PoisonCook.jsp"><img src="./images/image_<%=i %>_<%=i %>.jpg" style="width:100%; height:100%;"/></a>
                 		</div>
                 	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
                   <div class="text text2">
@@ -323,8 +328,8 @@
                     <div class="d-flex align-items-center">
                     	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
                     	<div class="pl-3 text2">
-		                    <p class="name">진웅진웅찌</p>
-		                    <span class="position">Marketing Manager</span>
+		                    <p class="name"><%=arr[i] %></p>
+		                    <span class="position">새싹회원</span>
 		                  </div>
 	                  </div>
                   </div>

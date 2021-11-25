@@ -64,7 +64,7 @@
     <section class="ftco-section">
       <div class="container">
         <div class="row d-flex">
-        	<% for(int i = 0; i < b_list.size(); i++) {%>
+        	<% for(int i = 0; i < 6; i++) {%>
           <div class="col-lg-6 d-flex align-items-stretch ftco-animate" style="padding-left: 0px;">
           	<div class="blog-entry d-md-flex">
           		<a href="PoisonCook2.jsp?num=<%=b_list.get(i).getNum() %>" class="block-20 img" style="background-image: url('fileUpload/<%=b_list.get(i).getFileName()%>');">

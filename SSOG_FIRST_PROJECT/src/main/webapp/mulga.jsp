@@ -175,7 +175,7 @@
 											<th style="width: 25%;">품목</th>
 											<!--<th>분류</th>-->
 											<th style="width: 25%;">지역</th>
-											<th style="width: 25%;">오늘날짜</th>
+											<th style="width: 25%;">오눌날짜</th>
 											<th style="width: 25%;">가격</th>
 										</tr>
 									</thead>
@@ -189,76 +189,76 @@
 									</tfoot>
 									<tbody>
 										<tr>
-											<td>Tiger Nixon</td>
-											<td>Edinburgh</td>
-											<td>2011/04/25</td>
-											<td>$320,800</td>
+											<td>쌀</td>
+											<td>고흥</td>
+											<td>2021/11/26</td>
+											<td>54800원</td>
 										</tr>
 										<tr>
-											<td>Garrett Winters</td>
-											<td>Tokyo</td>
-											<td>2011/07/25</td>
-											<td>$170,750</td>
+											<td>팥/붉은 팥(국산)</td>
+											<td>영광</td>
+											<td>2021/11/26</td>
+											<td>8797원</td>
 										</tr>
 										<tr>
-											<td>Ashton Cox</td>
-											<td>San Francisco</td>
-											<td>2009/01/12</td>
-											<td>$86,000</td>
+											<td>배추/가을</td>
+											<td>해남</td>
+											<td>2021/11/26</td>
+											<td>4048원</td>
 										</tr>
 										<tr>
-											<td>Cedric Kelly</td>
-											<td>Edinburgh</td>
-											<td>2012/03/29</td>
-											<td>$433,060</td>
+											<td>갓/갓</td>
+											<td>여수</td>
+											<td>2021/11/26</td>
+											<td>3799원</td>
 										</tr>
 										<tr>
-											<td>Airi Satou</td>
-											<td>Tokyo</td>
-											<td>2008/11/28</td>
-											<td>$162,700</td>
+											<td>오이/취청</td>
+											<td>광주</td>
+											<td>2021/11/26</td>
+											<td>16622원</td>
 										</tr>
 										<tr>
-											<td>Brielle Williamson</td>
-											<td>New York</td>
-											<td>2012/12/02</td>
-											<td>$372,000</td>
+											<td>호박/애호박</td>
+											<td>전주</td>
+											<td>2021/11/26</td>
+											<td>1737원</td>
 										</tr>
 										<tr>
-											<td>Herrod Chandler</td>
-											<td>San Francisco</td>
-											<td>2012/08/06</td>
-											<td>$137,500</td>
+											<td>쌀</td>
+											<td>고흥</td>
+											<td>2021/11/26</td>
+											<td>54800원</td>
 										</tr>
 										<tr>
-											<td>Rhona Davidson</td>
-											<td>Tokyo</td>
-											<td>2010/10/14</td>
-											<td>$327,900</td>
+											<td>팥/붉은 팥(국산)</td>
+											<td>영광</td>
+											<td>2021/11/26</td>
+											<td>8797원</td>
 										</tr>
 										<tr>
-											<td>Colleen Hurst</td>
-											<td>San Francisco</td>
-											<td>2009/09/15</td>
-											<td>$205,500</td>
+											<td>배추/가을</td>
+											<td>해남</td>
+											<td>2021/11/26</td>
+											<td>4048원</td>
 										</tr>
 										<tr>
-											<td>Sonya Frost</td>
-											<td>Edinburgh</td>
-											<td>2008/12/13</td>
-											<td>$103,600</td>
+											<td>갓/갓</td>
+											<td>여수</td>
+											<td>2021/11/26</td>
+											<td>3799원</td>
 										</tr>
 										<tr>
-											<td>Jena Gaines</td>
-											<td>London</td>
-											<td>2008/12/19</td>
-											<td>$90,560</td>
+											<td>오이/취청</td>
+											<td>광주</td>
+											<td>2021/11/26</td>
+											<td>16622원</td>
 										</tr>
 										<tr>
-											<td>Quinn Flynn</td>
-											<td>Edinburgh</td>
-											<td>2013/03/03</td>
-											<td>$342,000</td>
+											<td>호박/애호박</td>
+											<td>전주</td>
+											<td>2021/11/26</td>
+											<td>1737원</td>
 										</tr>
 										<tr>
 											<td>Charde Marshall</td>

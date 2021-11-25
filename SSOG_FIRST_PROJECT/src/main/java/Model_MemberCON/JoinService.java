@@ -37,7 +37,7 @@ public class JoinService extends HttpServlet {
 			System.out.println("회원가입성공!");
 			//response.sendRedirect("join_success.jsp"); //"join_success.jsp?email=email&pw=1235" --> query string 방식
 			//-forwarding 방식 페이지 이동
-			RequestDispatcher rd = request.getRequestDispatcher("index.html");
+			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 			//setAttribute(Name(String), Value(Object))
 			request.setAttribute("id", id); //기억할 값을 설정
 			
@@ -45,7 +45,7 @@ public class JoinService extends HttpServlet {
 			
 		}else {
 			System.out.println("회원가입실패!");
-			response.sendRedirect("index.html");
+			response.sendRedirect("index.jsp");
 		}
 		
 		

@@ -1,3 +1,5 @@
+<%@page import="java.util.Random"%>
+<%@page import="Controller.Controller_food"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -37,6 +39,13 @@
     </style>
   </head>
   <body>
+   	<% 
+ 	  Controller_food food = new Controller_food();
+ 	  Random ran = new Random();
+ 	  int top =ran.nextInt(100);
+ 	  String[] top100 = food.Top100();
+ 	  %>
+ 	
 	<div>
     	<jsp:include page="g_Header.jsp" flush="true" />
     </div>
@@ -73,11 +82,13 @@
 						</div>
 						<div class="row">
 						<%for(int i = 1; i <= 12; i++ ){ %>
+					                  <%String name1 = top100[ran.nextInt(100)];%>
+					                  <%String category = food.showCategori(name1); %>
 							<div class="col-md-4 d-flex">
-								<a href="g_recipe.jsp">
+								<a href="g_recipe.jsp?fName=<%=name1 %>">
 								<div class="product ftco-animate" style="text-align: center">
-									
-										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(img/<%=i %>.jpg)">
+									 	
+										<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=food.getImgUrl(name1)%>)">
 										<div class="desc">
 											<!-- <p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -87,8 +98,8 @@
 										</div>
 									</div>
 									<div class="text text-center" style="width: 315px;">
-										<span class="category">한식</span>
-										<h2>된장찌개 한상</h2>
+										<span class="category"><%=category%></span>
+										<h2><%=name1%></h2>
 										
 									</div>
 								</div>

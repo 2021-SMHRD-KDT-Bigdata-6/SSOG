@@ -38,9 +38,9 @@ public class LoginService extends HttpServlet {
 			//세션 값 설정
 			session.setAttribute("member", vo);
 			
-			response.sendRedirect("index.html");
+			response.sendRedirect("index.jsp");
 		}else {
-			response.sendRedirect("index.html");
+			response.sendRedirect("index.jsp");
 		}
 		
 		
