@@ -1,5 +1,7 @@
 package Main;
 
+import java.util.ArrayList;
+
 import Controller.Controller_Ingredient;
 import Controller.Controller_food;
 import Model_Food.FoodDAO;
@@ -26,7 +28,9 @@ public class SystemUpdate {
 //48 57
 		System.out.println("1" +conIngre.getImgUrl("°«/°«"));
 		
-
+		
+		ArrayList<String> foods =conFood.getFoodInCategori("¸é·ù");
+		System.out.println(foods.get(1));
 
 	}
 
