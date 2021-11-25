@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import Model_Food.FoodDAO;
 import Model_Nutrition.NutritionFoodDAO;
+import Model_Nutrition.NutritionFoodVO;
 import Model_Recipe.RecipeDAO;
 import Model_Recipe.RecipeVO;
 
@@ -18,10 +19,16 @@ public class Controller_food {
 	
 	
 	public NutritionFoodVO getNutrition(String food_name) {
-		return  nuDao.makeNutrition (food_name)
+		return  nuDao.makeNutrition (food_name);
 		
 	}
-	
+//	private double protein;
+//	private double carbohydrate;
+//	private double fat;
+//	private double meneral;
+//	private double vitamin;
+//	private double calory;
+//	
 	
 	
 	
