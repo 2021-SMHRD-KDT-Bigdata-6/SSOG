@@ -290,7 +290,7 @@
   	let category = document.getElementsByClass('fcategory');
   	
   	category.onclick = function(){
-  		category
+  		category.value
   		
   	}
   	

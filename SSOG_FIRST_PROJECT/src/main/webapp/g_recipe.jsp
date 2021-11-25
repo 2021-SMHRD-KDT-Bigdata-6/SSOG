@@ -53,6 +53,7 @@
     </style>
   </head>
   <body>
+  <!-- ¼öÁ¤ -->
   <%
   	String fName = request.getParameter("fName");
   	Controller_food conf = new Controller_food();
