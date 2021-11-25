@@ -171,7 +171,9 @@
 				<div class="row">
 					<div class="col-md-3 d-flex">
 						<div class="product ftco-animate">
-							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=top%>);">
+						<%String name1 = top100[ran.nextInt(100)];%>
+							<div  class="img d-flex align-items-center justify-content-center">
+							 <img src="<%=food.getImgUrl(name1)%>"> -
 								<div class="desc">
 									<p class="meta-prod d-flex">
 										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -181,16 +183,18 @@
 								</div>
 							</div>
 							<div class="">
-								<span class="sale">Sale</span>
+								
 								<span class="category">ÇØ»ê¹°¿ä¸®</span>
-								<h2>°¥Ä¡Á¶¸²</h2>
+								<h2 align="center"><%=name1%></h2>
 								<p class="mb-0"><span class="price price-sale">$69.00</span> <span class="price">$49.00</span></p>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3 d-flex">
 						<div class="product ftco-animate">
-							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/prod-2.jpg);">
+						<%String name2 = top100[ran.nextInt(100)];%>
+							<div class="img d-flex align-items-center justify-content-center">
+							<img src="<%=food.getImgUrl(name2)%>">
 								<div class="desc">
 									<p class="meta-prod d-flex">
 										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -202,14 +206,16 @@
 							<div class="text text-center">
 								<span class="seller">Best Seller</span>
 								<span class="category">ººÀ½¹ä</span>
-								<h2>»õ¿ì ººÀ½¹ä</h2>
+								<h2><%=name2%></h2>
 								<span class="price">$69.00</span>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3 d-flex">
 						<div class="product ftco-animate">
-							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/prod-3.jpg);">
+						<%String name3 = top100[ran.nextInt(100)];%>
+							<div class="img d-flex align-items-center justify-content-center">
+							<img src="<%=food.getImgUrl(name3)%>">	
 								<div class="desc">
 									<p class="meta-prod d-flex">
 										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -221,14 +227,16 @@
 							<div class="text text-center">
 								<span class="new">New Arrival</span>
 								<span class="category">Àü°ñ</span>
-								<h2>µÎºÎ Àü°ñ</h2>
+								<h2><%=name3 %></h2>
 								<span class="price">$69.00</span>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3 d-flex">
 						<div class="product ftco-animate">
-							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/prod-4.jpg);">
+						<%String name4 = top100[ran.nextInt(100)];%>
+							<div class="img d-flex align-items-center justify-content-center">
+							<img src="<%=food.getImgUrl(name4)%>">	
 								<div class="desc">
 									<p class="meta-prod d-flex">
 										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -239,7 +247,7 @@
 							</div>
 							<div class="text text-center">
 								<span class="category">°¡Á¤½Ä</span>
-								<h2>ÀâÃ¤</h2>
+								<h2><%=name4 %></h2>
 								<span class="price">$69.00</span>
 							</div>
 						</div>

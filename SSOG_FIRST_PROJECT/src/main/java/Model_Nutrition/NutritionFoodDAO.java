@@ -97,19 +97,19 @@ public class NutritionFoodDAO {
 				NutritionFoodVO sample = null;
 				while(rs.next()) {
 					if(rs.getString(1) == "protein") {
-						sample = new NutritionFoodVO(,0,0,0,0,);
-						rs.getString(0)
-						
-					}else if(rs.getString(1) == "car") {
-						sample = new NutritionFoodVO(0,,0,0,0,);
-					}else if(rs.getString(1) == "fat") {
-						sample = new NutritionFoodVO(0,0,,0,0,);
-					}else if(rs.getString(1) == "vitabl") {
-						sample = new NutritionFoodVO(0,0,0,0,,0);
-						
-					}else {
-						sample = new NutritionFoodVO(0,0,0,,0,0);
+						//sample = new NutritionFoodVO(,0,0,0,0,);
+						rs.getString(0);
 					}
+//					else if(rs.getString(1) == "car") {
+//						sample = new NutritionFoodVO(0,,0,0,0,);
+//					}else if(rs.getString(1) == "fat") {
+//						sample = new NutritionFoodVO(0,0,,0,0,);
+//					}else if(rs.getString(1) == "vitabl") {
+//						sample = new NutritionFoodVO(0,0,0,0,,0);
+//						
+//					}else {
+//						sample = new NutritionFoodVO(0,0,0,,0,0);
+//					}
 					
 					vo = sum(vo, sample);
 					
