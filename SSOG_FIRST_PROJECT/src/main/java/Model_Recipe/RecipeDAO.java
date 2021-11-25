@@ -55,7 +55,7 @@ public class RecipeDAO {
 			ArrayList<RecipeSubVO> samples = null;
 			rs.next();
 			String surl= rs.getString("r_img");
-			surl= surl.substring(surl.indexOf("webapp")+6);
+			surl= surl.substring(surl.indexOf("webapp")+7);
 			
 			samples.add(new RecipeSubVO (rs.getString("r_content"), surl));
 			String r_etc =rs.getString("r_etc");
