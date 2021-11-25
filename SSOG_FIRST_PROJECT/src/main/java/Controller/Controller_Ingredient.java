@@ -26,7 +26,7 @@ public class Controller_Ingredient {
 		ingredientDao.updateTIngredient(mb_id);
 	}
 	//해당재료 이미지 가져오기
-	public String showImg(String ingre_name) {
+	public String getImgUrl(String ingre_name) {
 		String url = ingredientDao.getImgUrl(ingre_name);
 		url = url.substring(url.indexOf("webapp")+6);
 		return url;
