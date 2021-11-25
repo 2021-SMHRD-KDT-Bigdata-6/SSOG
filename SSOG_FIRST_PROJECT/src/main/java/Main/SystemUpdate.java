@@ -24,7 +24,7 @@ public class SystemUpdate {
 		System.out.println(conFood .getImgUrl("°è¶õººÀ½¹ä"));
 
 //48 57
-		
+		System.out.println("1" +conFood.getImgUrl("È£µÎ¸êÄ¡ººÀ½"));
 		
 
 	}
