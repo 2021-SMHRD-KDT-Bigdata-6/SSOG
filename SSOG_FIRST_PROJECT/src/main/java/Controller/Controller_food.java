@@ -19,7 +19,9 @@ public class Controller_food {
 	
 	
 	public NutritionFoodVO getNutrition(String food_name) {
-		return  nuDao.makeNutrition (food_name);
+		NutritionFoodVO cf = nuDao.makeNutrition (food_name);
+		NutritionFoodVO result = new NutritionFoodVO(cf.getProtein()*100/65,cf.getCarbohydrate()*100/130,cf.getFat()*100/50, cf.getMeneral()*100/10, cf.getVitamin()*3000, cf.getCalory()*100/2700);
+		return  result;
 		
 	}
 //	private double protein;
