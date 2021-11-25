@@ -1,3 +1,4 @@
+<%@page import="java.util.Locale.Category"%>
 <%@page import="Model_Food.FoodVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Random"%>
@@ -174,30 +175,33 @@
         </div>
 				<div class="row">
 					
-					<%--반복될 것 --%>
-					<%for(int i = 0; i < 4; i++){ %>
-					<div class="col-md-3 d-flex">
-						<div class="product ftco-animate">
-						<%String name1 = top100[ran.nextInt(100)];%>
-						<%String category = food.showCategori(name1); %>
-							<div class="img d-flex align-items-center justify-content-center">
-							<img src="<%=food.getImgUrl(name1)%>">
-								<div class="desc">
-									<p class="meta-prod d-flex">
-										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
-										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
-										<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
-									</p>
-								</div>
-							</div>
-							<div class="text text-center">
-								<span class="seller">Best Seller</span>
-								<span class="category"><%=category %></span>
-								<h2><%=name1%></h2>
-							</div>
-						</div>
-					</div>
-					<%} %>
+					   <%--반복될 것 --%>
+               <%for(int i = 0; i < 4; i++){ %>
+               <div class="col-md-3 d-flex">
+                  <div class="product ftco-animate">
+                   	
+                  <%String name1 = top100[ran.nextInt(100)];%>
+                  <%String category = food.showCategori(name1); %>
+                     <div class="img d-flex align-items-center justify-content">
+                     	<img src="<%=food.getImgUrl(name1)%>" style="width:255px; height: 350px;">
+                     		<div class="desc">
+                     			<p class="meta-prod d-flex" style="text-align:center;" >
+                    				<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
+                        			<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
+                        			<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
+                    			</p>
+                    		</div>
+                     </div>
+                     		<div class="text text-center">
+                        		<span class="seller">Best Seller</span>
+                        		<span class="category"><%=category%></span>
+                        		<h2><%=name1%></h2>
+                     		</div>
+                  	</div>
+              	 </div>
+               <%} %>
+              
+					
 					
 					<%-- --%>
 					</div>
