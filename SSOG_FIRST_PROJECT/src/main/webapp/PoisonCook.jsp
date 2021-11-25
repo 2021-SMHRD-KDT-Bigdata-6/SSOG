@@ -54,7 +54,7 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate mb-5 text-center">
-          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Ä¿¹Â´ÏÆ¼ <i class="fa fa-chevron-right"></i></span><span>ÇØÇÇCOOK</span></p>
+          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.jsp">Home <i class="fa fa-chevron-right"></i></a></span> <span>Ä¿¹Â´ÏÆ¼ <i class="fa fa-chevron-right"></i></span><span>Æ÷ÀÌÁðCOOK</span></p>
             <h2 class="mb-0 bread">Æ÷ÀÌÁðCOOK</h2>
           </div>
         </div>
@@ -67,7 +67,7 @@
         	<% for(int i = 0; i < b_list.size(); i++) {%>
           <div class="col-lg-6 d-flex align-items-stretch ftco-animate" style="padding-left: 0px;">
           	<div class="blog-entry d-md-flex">
-          		<a href="HappyCook2.jsp?num=<%=b_list.get(i).getNum() %>" class="block-20 img" style="background-image: url('fileUpload/<%=b_list.get(i).getFileName()%>');">
+          		<a href="PoisonCook2.jsp?num=<%=b_list.get(i).getNum() %>" class="block-20 img" style="background-image: url('fileUpload/<%=b_list.get(i).getFileName()%>');">
               </a>
               <div class="text p-4 bg-light" id="pdbtWhy">
               	<div class="meta">

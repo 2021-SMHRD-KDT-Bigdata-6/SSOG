@@ -55,7 +55,7 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate mb-5 text-center">
-          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>커뮤니티 <i class="fa fa-chevron-right"></i></span><span>해피COOK</span></p>
+          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.jsp">Home <i class="fa fa-chevron-right"></i></a></span> <span>커뮤니티 <i class="fa fa-chevron-right"></i></span><span>해피COOK</span></p>
             <h2 class="mb-0 bread">해피COOK</h2>
           </div>
         </div>
