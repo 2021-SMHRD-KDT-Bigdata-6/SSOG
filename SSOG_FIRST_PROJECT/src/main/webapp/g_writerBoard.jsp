@@ -1,3 +1,4 @@
+<%@page import="Model_Member.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -64,6 +65,12 @@
     </style>
   </head>
   <body>
+  <%
+	MemberVO vo = (MemberVO)session.getAttribute("member");
+
+
+	%>
+  
 	<div>
     	<jsp:include page="g_Header.jsp" flush="true"></jsp:include>
     </div>
@@ -89,12 +96,32 @@
 								<div class="col-md-7">
 									<div class="contact-wrap w-100 p-md-5 p-4">
 										<h3 class="mb-4">게시글 작성</h3>
-										<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+										<form action="WriterBoardService" method="POST" enctype="multipart/form-data" id="contactForm" name="contactForm" class="contactForm">
 											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+													<%if(vo==null){ %>
+														<label class="label" for="name">작성자</label>
+														<span style="margin-left:20px;"></span>
+													<%}else{ %>
+														<label class="label" for="name">작성자</label>
+														<span name="writer" style="margin-left:20px;"><%=vo.getMb_id() %></span>
+													<%} %>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="name">카테고리</label>
+														<select name="boardCate">
+															<option name="boardCate">HappyCook</option>
+															<option name="boardCate">PoisonCook</option>
+														</select>
+													</div>
+												</div>
 												<div class="col-md-12">
 													<div class="form-group">
 														<label class="label" for="subject">제목</label>
-														<input type="text" class="form-control" name="subject" id="subject" placeholder="제목">
+														<input type="text" class="form-control" name="title" id="subject" placeholder="제목">
 													</div>
 												</div>
 												<div class="col-md-12">
@@ -103,9 +130,9 @@
 														<div class="filebox">
 														    <input class="upload-name" value="첨부파일" placeholder="첨부파일">
 														    <label for="file">파일찾기</label> 
-														    <input type="file" id="file">
+														    <input name="fileName" type="file" id="file">
 														</div>
-														<textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="내용작성"></textarea>
+														<textarea name="content" class="form-control" id="message" cols="30" rows="10" placeholder="내용작성"></textarea>
 													</div>
 												</div>
 												<div class="col-md-12">
