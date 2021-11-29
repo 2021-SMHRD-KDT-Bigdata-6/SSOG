@@ -64,6 +64,9 @@
 	padding-top: 96px;
 	padding-bottom: 96px;
 }
+#center2{
+	margin-left:280px;
+}
 </style>
 
 </head>
@@ -110,20 +113,13 @@
 
 
 						<div>
-							<ul class="cate">
+							<ul class="cate" id="center2">
 								<li id="meet">육류</li>
 								<li>생선류</li>
 								<li>곡류</li>
 								<li>야채류</li>
 								<li>과일류</li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
+								
 
 							</ul>
 
@@ -247,12 +243,6 @@
 											<td>여수</td>
 											<td>2021/11/26</td>
 											<td>3799원</td>
-										</tr>
-										<tr>
-											<td>오이/취청</td>
-											<td>광주</td>
-											<td>2021/11/26</td>
-											<td>16622원</td>
 										</tr>
 										<tr>
 											<td>호박/애호박</td>
